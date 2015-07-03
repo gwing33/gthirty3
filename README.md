@@ -1,2 +1,1 @@
-# gthirty3
-personal website
+# gThirty3
