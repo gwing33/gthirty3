@@ -7,51 +7,34 @@
 
 import express from 'express';
 import path from 'path';
-import serialize from 'serialize-javascript';
-import {navigateAction} from 'fluxible-router';
+// import serialize from 'serialize-javascript';
 import debugLib from 'debug';
 import React from 'react';
-import app from './app';
-import HtmlComponent from './components/Html';
-const htmlComponent = React.createFactory(HtmlComponent);
+import ReactRouter from 'react-router';
+
+import url from 'url';
+import Html from './pages/html.jsx';
+import AppRoutes from './routes/routes.jsx';
+// const htmlComponent = React.createFactory(HtmlComponent);
 
 const debug = debugLib('gthirty3');
 
 const server = express();
 server.set('state namespace', 'App');
-server.use('/public', express.static(path.join(__dirname, '/build')));
+server.use('/public', express.static(path.join(__dirname, '/public')));
 
 server.use((req, res, next) => {
-    let context = app.createContext();
+  var path = url.parse(req.url).pathname;
 
-    debug('Executing navigate action');
-    context.getActionContext().executeAction(navigateAction, {
-        url: req.url
-    }, (err) => {
-        if (err) {
-            if (err.statusCode && err.statusCode === 404) {
-                next();
-            } else {
-                next(err);
-            }
-            return;
-        }
+  ReactRouter.run(AppRoutes, path, function (Handler, state) {
+    let markup = React.renderToString(<Handler />);
+    let html   = React.renderToStaticMarkup(<Html markup={markup} />);
 
-        debug('Exposing context state');
-        const exposed = 'window.App=' + serialize(app.dehydrate(context)) + ';';
-
-        debug('Rendering Application component into html');
-        const html = React.renderToStaticMarkup(htmlComponent({
-            context: context.getComponentContext(),
-            state: exposed,
-            markup: React.renderToString(context.createElement())
-        }));
-
-        debug('Sending markup');
-        res.type('html');
-        res.write('<!DOCTYPE html>' + html);
-        res.end();
-    });
+    debug('Sending markup');
+    res.type('html');
+    res.write('<!DOCTYPE html>' + html);
+    res.end();
+  });
 });
 
 const port = process.env.PORT || 3000;
