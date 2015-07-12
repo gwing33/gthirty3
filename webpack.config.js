@@ -1,6 +1,6 @@
 module.exports = {
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.jsx']
   },
   entry: './client.js',
   output: {
@@ -17,6 +17,6 @@ module.exports = {
     colors: true
   },
   devtool: 'source-map',
-  // watch: true,
-  // keepalive: true
+  watch: true,
+  keepalive: true
 };

@@ -17,7 +17,10 @@ gulp.task('nodemon:app', ['clean'], function () {
     nodemon({
       script: './start.js',
       ignore: ['build/**'],
-      ext: 'js'
+      ext: 'js jsx',
+      execMap: {
+        js: "iojs"
+      }
     });
 });
 
@@ -27,7 +30,7 @@ gulp.task('webpack:dev', ['clean'], function() {
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
-    gulp.watch(['stores/**/*.js', 'components/**/*.js'], ['webpack:dev']);
+    gulp.watch(['**/*.jsx'], ['webpack:dev']);
 });
 
 gulp.task('jest', function () {

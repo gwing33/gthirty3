@@ -12,16 +12,14 @@ import debugLib from 'debug';
 import React from 'react';
 import ReactRouter from 'react-router';
 
-import Html from './components/Html';
-import ReactViewEngine from 'express-react-views';
-const htmlComponent = React.createFactory(HtmlComponent);
+import url from 'url';
+import Html from './pages/html.jsx';
+import AppRoutes from './routes/routes.jsx';
+// const htmlComponent = React.createFactory(HtmlComponent);
 
 const debug = debugLib('gthirty3');
 
 const server = express();
-server.set('views', __dirname + '/views');
-server.set('view engine', 'js');
-server.engine('js', ReactViewEngine.createEngine());
 server.set('state namespace', 'App');
 server.use('/public', express.static(path.join(__dirname, '/public')));
 
