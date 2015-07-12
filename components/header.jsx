@@ -1,9 +1,12 @@
 'use strict';
 import React from 'react';
-import Logo from '../components/logo.jsx';
-import Icon from '../components/icon.jsx';
+
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
+
+import Social from './social.jsx';
+import Logo from './logo.jsx';
+
 
 var styles = StyleSheet.create({
   content: {
@@ -44,8 +47,6 @@ var styles = StyleSheet.create({
     display: 'block',
     fontSize: '30px'
   }
-
-
 });
 
 class Header extends React.Component {
@@ -54,7 +55,7 @@ class Header extends React.Component {
       <header styles={styles.header}>
         <div styles={[styles.divBg, styles.div1]} />
         <div styles={[styles.divBg, styles.div2]} />
-        <div styles={[BaseStyles.container, tyles.content]}>
+        <div styles={[BaseStyles.container, styles.content]}>
           <Logo size={150} fill="#1D1E21" />
           <h1 styles={styles.h1}>
             Gerald Leenerts III
@@ -62,26 +63,7 @@ class Header extends React.Component {
           </h1>
         </div>
 
-        <ul styles={[BaseStyles.resetList]}>
-          <li>
-            <a href='https://www.linkedin.com/pub/gerald-leenerts/10/a23/2a6' target='_blank'>
-              <Icon />
-            </a>
-            <div />
-          </li>
-          <li>
-            <a href='https://plus.google.com/+GeraldLeenerts/posts' target='_blank'>
-              <Icon />
-            </a>
-            <div />
-          </li>
-          <li>
-            <a href='https://github.com/gwing33' target='_blank'>
-              <Icon />
-            </a>
-            <div />
-          </li>
-        </ul>
+        <Social />
       </header>
     );
   }

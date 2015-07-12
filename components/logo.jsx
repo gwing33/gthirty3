@@ -1,14 +1,14 @@
 'use strict';
 import React from 'react';
 
-let LogoOriginalSize = 200;
+const ORIGIANL_SIZE = 200;
 
 class Logo extends React.Component {
   render() {
     let size = this.props.size;
     let fill = this.props.fill;
     let view_box = [0, 0, size, size].join(' ');
-    let scale = size / LogoOriginalSize;
+    let scale = size / ORIGIANL_SIZE;
 
     return (
       <svg xmlns="http://www.w3.org/svg/2000"
@@ -35,7 +35,7 @@ Logo.propTypes = {
   fill: React.PropTypes.string
 };
 Logo.defaultProps = {
-  size: LogoOriginalSize,
+  size: ORIGIANL_SIZE,
   fill: '#5C5F62'
 };
 
