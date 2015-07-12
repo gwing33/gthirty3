@@ -26,7 +26,7 @@ class SocialItem extends React.Component {
   render() {
     return (
       <li styles={styles.li}>
-        <a href={this.props.url} target='_blank'>
+        <a href={this.props.href} target='_blank'>
           <Icon size={35} type={this.props.type} />
         </a>
         <div>

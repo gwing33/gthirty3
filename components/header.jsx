@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-
+import Settings from '../settings';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
 
@@ -17,10 +17,12 @@ var styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#56595C',
+    borderBottom: `1px solid ${Settings.colors.darkestGray}`,
     overflow: 'hidden',
     position: 'relative'
   },
   divBg: {
+    //backgroundColor: `rgba(${Settings.colors.rgb.blue},0.1)`,
     position: 'absolute',
     width: '200%',
     transform: 'rotate(-10deg)',
@@ -35,7 +37,7 @@ var styles = StyleSheet.create({
   div2: {
     backgroundColor: '#515356',
     top: '-33%',
-    zIndex: '1',
+    zIndex: '5',
   },
 
   h1: {

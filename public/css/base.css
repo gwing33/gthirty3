@@ -92,6 +92,12 @@ template {
 
 a {
   background-color: transparent;
+  color: #328BD6;
+  text-decoration: none;
+}
+a:hover {
+  color: #328BD6;
+  text-decoration: underline;
 }
 
 /**
