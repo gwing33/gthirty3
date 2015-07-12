@@ -34,9 +34,9 @@ wercker build
     - [ ] Add in "Thoughts."
 - [ ] Technical
     - [x] Add Wercker as Build System.
-    - [ ] Setup ExpressJS Server
-        - [ ] Render out React Views
-        - [ ] Routes for both Server and Client Application
+    - [x] Setup ExpressJS Server
+        - [x] Render out React Views
+        - [x] Routes for both Server and Client Application
     - [ ] Add Styles from Design.
     - [ ] Build Style Guide.
     - [ ] Set Wercker to Deploy Code.

@@ -17,23 +17,22 @@ class Logo extends React.Component {
            width={size}
            fill={fill}>
          <g transform={`scale(${scale})`}>
-           <polygon fill="#5C5F62" points="53.3,1.3 1.3,1.3 1.3,53.3 0,53.3 0,0 53.3,0 "/>
-           <polygon fill="#5C5F62" points="200,53.3 198.7,53.3 198.7,1.3 146.7,1.3 146.7,0 200,0 "/>
-           <polygon fill="#5C5F62" points="53.3,200 0,200 0,146.7 1.3,146.7 1.3,198.7 53.3,198.7 "/>
-           <polygon fill="#5C5F62" points="200,200 146.7,200 146.7,198.7 198.7,198.7 198.7,146.7 200,146.7 "/>
-           <rect x="46" y="40" fill="#5C5F62" width="1.3" height="106.7"/>
-           <rect x="99.3" y="40" fill="#5C5F62" width="1.3" height="106.7"/>
-           <rect x="152" y="40" fill="#5C5F62" width="1.3" height="106.7"/>
+           <polygon fill={fill} points="53.3,1.3 1.3,1.3 1.3,53.3 0,53.3 0,0 53.3,0 "/>
+           <polygon fill={fill} points="200,53.3 198.7,53.3 198.7,1.3 146.7,1.3 146.7,0 200,0 "/>
+           <polygon fill={fill} points="53.3,200 0,200 0,146.7 1.3,146.7 1.3,198.7 53.3,198.7 "/>
+           <polygon fill={fill} points="200,200 146.7,200 146.7,198.7 198.7,198.7 198.7,146.7 200,146.7 "/>
+           <rect x="46" y="40" fill={fill} width="1.3" height="106.7"/>
+           <rect x="99.3" y="40" fill={fill} width="1.3" height="106.7"/>
+           <rect x="152" y="40" fill={fill} width="1.3" height="106.7"/>
          </g>
       </svg>
     );
   }
 }
 
-let PropTypes = React.PropTypes;
 Logo.propTypes = {
-  size: PropTypes.number,
-  fill: PropTypes.string
+  size: React.PropTypes.number,
+  fill: React.PropTypes.string
 };
 Logo.defaultProps = {
   size: LogoOriginalSize,
