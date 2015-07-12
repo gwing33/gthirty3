@@ -1,2 +1,11 @@
+# OSX
+.DS_Store
+
+# Node
 build
 node_modules
+
+# Wercker
+_projects/
+_builds/
+_steps/
