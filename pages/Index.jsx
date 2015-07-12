@@ -51,6 +51,10 @@ class Index extends React.Component {
 
 
         <h2>EDUCATION</h2>
+        <h5>Bachelors of Fine Arts with an emphasis in Computer Animation</h5>
+        <ul>
+          <li>Missouri State University</li>
+        </ul>
 
 
         <h2>SKILLS & READS</h2>
