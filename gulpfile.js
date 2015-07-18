@@ -30,7 +30,7 @@ gulp.task('webpack:dev', ['clean'], function() {
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
-    gulp.watch(['**/*.jsx'], ['webpack:dev']);
+    gulp.watch(['**/*.jsx', 'styles/**/*.js', 'utils/**/*.js'], ['webpack:dev']);
 });
 
 gulp.task('jest', function () {

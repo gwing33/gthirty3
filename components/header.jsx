@@ -26,6 +26,8 @@ var styles = StyleSheet.create({
     position: 'absolute',
     width: '200%',
     transform: 'rotate(-10deg)',
+    WebkitTransform: 'rotate(-10deg)',
+    msTransform: 'rotate(-10deg)',
     height: '100%',
     left: '-50%'
   },

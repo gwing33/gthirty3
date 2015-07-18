@@ -2,6 +2,8 @@
 import React from 'react';
 import { State, Link } from 'react-router';
 import Settings from '../settings';
+
+// import MediaQuery from 'react-responsive';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
 
@@ -28,6 +30,8 @@ var styles = StyleSheet.create({
     color: Settings.colors.blue,
     display: 'inline-block',
     transform: 'rotate(270deg)',
+    WebkitTransform: 'rotate(270deg)',
+    msTransform: 'rotate(270deg)',
     fontSize: '40px',
     textAlign: 'center',
     width: '138px',
@@ -74,7 +78,6 @@ var styles = StyleSheet.create({
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isHover: false };
   }
 
   _onMouseEnter() {
@@ -96,9 +99,10 @@ class Nav extends React.Component {
       linkStyles.push(styles.aHover);
     }
 
+    let lowRes = typeof window !== 'undefined' && window.matchMedia("(max-width: 999px)").matches;
+
     return (
       <nav styles={styles.nav}>
-
         <div styles={styles.brand}>
           <div styles={styles.brand_title}>gThirty</div>
           <a href='#app' styles={styles.logo}>

@@ -30,7 +30,7 @@ wercker build
     - [x] Create gthirty3 Logo.
     - [x] Layout content.
     - [x] Wireframe website.
-    - [ ] Responsive Design thought.
+    - [ ] Responsive Design thought. (In Progress)
     - [ ] Add in "Studies."
     - [ ] Add in "Thoughts."
 - [ ] Technical
@@ -38,7 +38,7 @@ wercker build
     - [x] Setup ExpressJS Server
         - [x] Render out React Views
         - [x] Routes for both Server and Client Application
-    - [ ] Add Styles from Design.
+    - [ ] Add Styles from Design. 
     - [ ] Make Responsive.
     - [ ] Build Style Guide.
     - [ ] Set Wercker to Deploy Code.

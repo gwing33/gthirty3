@@ -24,6 +24,7 @@
     "lodash": "^3.10.0",
     "react": "^0.13.3",
     "react-mixin": "^1.6.0",
+    "react-responsive": "0.0.6",
     "react-router": "^0.13.3",
     "react-style": "^0.5.5"
   },
