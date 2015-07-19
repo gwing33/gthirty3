@@ -1,6 +1,17 @@
 'use strict';
 import React from 'react';
 import BaseStyles from '../styles/base.styles.js';
+import StyleSheet from 'react-style';
+
+let styles = StyleSheet.create({
+  h2: {
+    marginTop: '120px'
+  },
+
+  h5: {
+    marginTop: '20px'
+  }
+});
 
 class Index extends React.Component {
   render() {
@@ -8,6 +19,7 @@ class Index extends React.Component {
       <div styles={[BaseStyles.container, { padding: '60px 0' }]}>
 
         <h2>PASSION</h2>
+        <hr />
         <p>
           I have a desire to create a great scalable branding experience for companies. Branding is not just about a great logo, it also entails consistent look throughout a website or suite of products. A great style/branding guide makes the UX better, because you change core concepts and not just the surface design.
         </p>
@@ -16,16 +28,16 @@ class Index extends React.Component {
         </p>
 
 
-        <h2>EXPERIENCES</h2>
-
-        <h5>Pearl Coffee <em>(June 2013 - Present)</em></h5>
+        <h2 styles={styles.h2}>EXPERIENCES</h2>
+        <hr />
+        <h5 styles={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></h5>
         <ul>
           <li>Co-Founder, Lead Branding and Marketing Strategist</li>
           <li>Designed the full experience of the Pearl Coffee brand.</li>
           <li>Focus on eductation as a large part of our marketing strategy.</li>
         </ul>
 
-        <h5>Life Time Fitness <em>(April 2014 - Present)</em></h5>
+        <h5 styles={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></h5>
         <ul>
           <li>Senior UX Developer / Senior Front-end Engineer / Senior Software Engineer</li>
           <li>React / Flux lead engineer.</li>
@@ -33,7 +45,7 @@ class Index extends React.Component {
           <li>Focused on creating a style guide that both Engineers and Designers can work on as a point of hand off and documentation for branding consistency.</li>
         </ul>
 
-        <h5>SpyFu <em>(May 2011 - April 2014)</em></h5>
+        <h5 styles={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></h5>
         <ul>
           <li>Helped redesign the entire front-end of SpyFu.com, had to work around the large data aspect.</li>
           <li>Set up processes such as a reliable CI / CD system for consisten deployments.</li>
@@ -42,7 +54,7 @@ class Index extends React.Component {
         </ul>
 
 
-        <h5>Universal UClick <em>(July 2010 - May 2011)</em></h5>
+        <h5 styles={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></h5>
         <ul>
           <li>Worked with the auther of Doonsebury to create their website, helping them understand the difference between print and web design.</li>
           <li>Implemented large Ruby on Rails web apps.</li>
@@ -50,15 +62,16 @@ class Index extends React.Component {
         </ul>
 
 
-        <h2>EDUCATION</h2>
-        <h5>Bachelors of Fine Arts with an emphasis in Computer Animation</h5>
+        <h2 styles={styles.h2}>EDUCATION</h2>
+        <h5 styles={styles.h5}>Bachelors of Fine Arts with an emphasis in Computer Animation</h5>
         <ul>
           <li>Missouri State University</li>
         </ul>
 
 
-        <h2>SKILLS & READS</h2>
-        <h5>Design & Product</h5>
+        <h2 styles={styles.h2}>SKILLS & READS</h2>
+        <hr />
+        <h5 styles={styles.h5}>Design & Product</h5>
         <ul>
           <li>UXPin and Hand Drawn Wireframes</li>
           <li>Adobe Creative Suite: Photoshop, Illustrator, After Effects</li>
@@ -67,13 +80,13 @@ class Index extends React.Component {
           <li>Agile User Testing</li>
         </ul>
 
-        <h5>Methodologies</h5>
+        <h5 styles={styles.h5}>Methodologies</h5>
         <ul>
           <li>The Hacker Way</li>
           <li>Agile / Scrum</li>
         </ul>
 
-        <h5>Development & Engineering</h5>
+        <h5 styles={styles.h5}>Development & Engineering</h5>
         <ul>
           <li>JavaScript: React, Flux, BackboneJS, MV* Patterns</li>
           <li>LESS / SASS / CSS / HTML</li>
@@ -83,7 +96,7 @@ class Index extends React.Component {
           <li>Bash Scripting, Docker, TeamCity, Jenkins, Octopus Deploy, TravisCI</li>
         </ul>
 
-        <h5>Favorite Books</h5>
+        <h5 styles={styles.h5}>Favorite Books</h5>
         <ul>
           <li>Don't make me Think</li>
           <li>Design of Everyday Things</li>
