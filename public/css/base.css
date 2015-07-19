@@ -190,19 +190,19 @@ p {
   color: #242526;
 }
 
-ul {
+ul.list {
   margin: 0 0 0 12px;
   padding: 0;
   line-height: 28px;
   font-size: 18px;
 }
 
-ul li {
+ul.list li {
   list-style: none;
   text-indent: -5px;
 }
 
-ul li:before {
+ul.list li:before {
   position: relative;
   left: -5px;
   content: '-'
