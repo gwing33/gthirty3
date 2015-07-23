@@ -9,7 +9,7 @@ class Html extends React.Component {
           <meta charSet="utf-8" />
           <title>gThirty3 [Gerald Leenerts III]</title>
           <meta name="viewport" content="width=device-width, user-scalable=no" />
-          <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css' />
+          <link href='//fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css' />
           <link href='/public/css/base.css' rel='stylesheet' type='text/css' />
 
           <link rel="apple-touch-icon" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png"/>
