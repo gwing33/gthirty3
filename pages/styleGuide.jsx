@@ -1,10 +1,11 @@
 'use strict';
 import React from 'react';
+import BaseStyles from '../styles/base.styles.js';
 
 class StyleGuide extends React.Component {
   render() {
     return (
-      <div>
+      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
         <h1>The Branding & Style Guidelines</h1>
         <h2>The High Level Overview of Visualizing and Documenting</h2>
 
