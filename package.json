@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "gulp jest",
-    "start": "node start.js"
+    "start": "iojs start.js"
   },
   "repository": {
     "type": "git",
