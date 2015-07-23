@@ -6,7 +6,6 @@ var webpack = require('gulp-webpack-build');
 var path = require('path');
 var del = require('del');
 var jest = require('gulp-jest');
-var webpackConfigPath = './webpack.config.js';
 
 gulp.task('default', ['clean', 'nodemon:app', 'build-cli-dev']);
 
@@ -34,7 +33,7 @@ gulp.task('nodemon:app', ['clean'], function () {
 });
 
 gulp.task('webpack:dev', ['clean', 'set-dev-node-env'], function() {
-    gulp.src(path.resolve(webpackConfigPath))
+    gulp.src(path.resolve('./webpack.config.js'))
         .pipe(webpack.run());
 });
 
@@ -52,17 +51,17 @@ gulp.task('jest', function () {
     return gulp.src('__tests__').pipe(jest({
         scriptPreprocessor: "./spec/support/preprocessor.js",
         unmockedModulePathPatterns: [
-            "node_modules/react"
+          "node_modules/react"
         ],
         testDirectoryName: "spec",
         testPathIgnorePatterns: [
-            "node_modules",
-            "spec/support"
+          "node_modules",
+          "spec/support"
         ],
         moduleFileExtensions: [
-            "js",
-            "json",
-            "react"
+          "js",
+          "json",
+          "react"
         ]
     }));
 });
