@@ -29,7 +29,7 @@ gulp.task('webpack:dev', ['clean'], function() {
         .pipe(webpack.run());
 });
 
-gulp.task('build', ['clean'], function() {
+gulp.task('heroku:production', ['clean'], function() {
     gulp.src(path.resolve(webpackConfigPath))
         .pipe(webpack.run());
 });
