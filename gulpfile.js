@@ -31,21 +31,21 @@ gulp.task('nodemon:app', ['clean'], function () {
 });
 
 gulp.task('webpack:dev', ['clean'], function() {
-    gulp.src(path.resolve('./webpack.config.js'))
-        .pipe(webpack.run());
+    return gulp.src(path.resolve('./webpack.config.js'))
+               .pipe(webpack.run());
 });
 
 gulp.task('webpack:prod', ['webpack:dev'], function() {
   process.env.NODE_ENV = 'production';
 
-  return gulp.src(__dirname + '/public/js/build/*.js')
+  return gulp.src('./public/js/build/*.js')
     .pipe(uglify())
     .pipe(rename(function (path) {
       if(path.extname === '.js') {
         path.basename += '.min';
       }
     }))
-    .pipe(gulp.dest(__dirname + '/public/js/build/'));
+    .pipe(gulp.dest('./public/js/build/'));
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
