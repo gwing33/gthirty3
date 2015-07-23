@@ -7,7 +7,7 @@ var path = require('path');
 var del = require('del');
 var jest = require('gulp-jest');
 
-gulp.task('default', ['clean', 'nodemon:app', 'build-cli-dev']);
+gulp.task('default', ['clean', 'nodemon:app', 'build-cli-dev', 'set-dev-node-env']);
 
 gulp.task('clean', function (cb) {
     del(['build'], cb);
@@ -17,9 +17,6 @@ gulp.task('set-dev-node-env', function() {
     return process.env.NODE_ENV = 'development';
 });
 
-gulp.task('set-prod-node-env', function() {
-    return process.env.NODE_ENV = 'production';
-});
 
 gulp.task('nodemon:app', ['clean'], function () {
     nodemon({
@@ -32,12 +29,14 @@ gulp.task('nodemon:app', ['clean'], function () {
     });
 });
 
-gulp.task('webpack:dev', ['clean', 'set-dev-node-env'], function() {
+gulp.task('webpack:dev', ['clean'], function() {
     gulp.src(path.resolve('./webpack.config.js'))
         .pipe(webpack.run());
 });
 
-gulp.task('webpack:prod', ['webpack:dev', 'set-prod-node-env'], function() {
+gulp.task('webpack:prod', ['webpack:dev'], function() {
+  process.env.NODE_ENV = 'production';
+
   return gulp.src('./public/js/build/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./public/js/build/dist'));
