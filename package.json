@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "iojs": "2.3.x"
+  }
   "scripts": {
     "test": "gulp jest",
     "start": "node start.js"
