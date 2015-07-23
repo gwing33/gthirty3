@@ -47,7 +47,8 @@ class Index extends React.Component {
 
         <h5 styles={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></h5>
         <ul className='list'>
-          <li>Helped redesign the entire front-end of SpyFu.com, had to work around the large data aspect.</li>
+          <li>UI/UX Designer</li>
+          <li>Redesigned the entire front-end of SpyFu.com, had to work around the large data aspect.</li>
           <li>Set up processes such as a reliable CI / CD system for consisten deployments.</li>
           <li>Was a leader in helping direct the company with their vision.</li>
           <li>Build new products and helped design them around business models.</li>
@@ -56,6 +57,7 @@ class Index extends React.Component {
 
         <h5 styles={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></h5>
         <ul className='list'>
+          <li>UI/UX Designer</li>
           <li>Worked with the auther of Doonsebury to create their website, helping them understand the difference between print and web design.</li>
           <li>Implemented large Ruby on Rails web apps.</li>
           <li>Designed database structures and software system to handle large file aggregation and to help optimize for both web and print solutions.</li>
