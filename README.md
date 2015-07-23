@@ -4,19 +4,17 @@ My personal website.
 For when I want to write blog articles, test out code or designs.
 
 ## Install
-Make sure [Docker](https://docs.docker.com/installation/) is Installed as well as the [Wercker CLI](http://devcenter.wercker.com/learn/basics/the-wercker-cli.html)
+Running on iojs 2.3.
 
-**Build Pipeline**
 ```bash
-wercker build
+npm Install
+gulp # Run for Development
+gulp webpack:prod # Build for production
+npm start # Run in Production mode
 ```
 
-**Development**
-```bash
-# TODO
-```
-
-## TODO: Deploying
+## Deploying
+It's on Heroku, so just push to master and it'll auto deploy.
 
 ## Site Overview
 #### Site Layout
@@ -40,5 +38,7 @@ wercker build
         - [x] ~~Routes for both Server and Client Application~~
     - [x] ~~Add Styles from Design.~~
     - [x] ~~Make Responsive.~~
-    - [ ] Set Wercker to Deploy Code. (In Progress)
-    - [ ] Build Style Guide.
+    - [x] ~~Set Heroku to Deploy Code.~~
+    - [ ] Refactor Responsive Code. (In Progress)
+    - [ ] Build Style Guide. (In Progress)
+    - [ ] Add in Routing, probably pull in modular react router.
