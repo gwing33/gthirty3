@@ -38,9 +38,9 @@ gulp.task('webpack:dev', ['clean', 'set-dev-node-env'], function() {
 });
 
 gulp.task('webpack:prod', ['webpack:dev', 'set-prod-node-env'], function() {
-  return gulp.src('public/js/build/*.js')
+  return gulp.src('./public/js/build/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('public/js/build/dist'));
+    .pipe(gulp.dest('./public/js/build/dist'));
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
