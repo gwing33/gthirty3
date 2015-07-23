@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 var nodemon = require('gulp-nodemon');
 var webpack = require('gulp-webpack-build');
 var path = require('path');
@@ -39,7 +40,12 @@ gulp.task('webpack:prod', ['webpack:dev'], function() {
 
   return gulp.src('./public/js/build/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js/build/dist'));
+    .pipe(rename(function (path) {
+      if(path.extname === '.js') {
+        path.basename += '.min';
+      }
+    }))
+    .pipe(gulp.dest('./public/js/build/'));
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {

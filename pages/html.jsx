@@ -3,7 +3,7 @@ var React = require('react');
 
 class Html extends React.Component {
   render() {
-    let src_path = (process.env.NODE_ENV === 'development') ? '/public/js/build/main.js' : '/public/js/build/dist/main.js'
+    let src_path = (process.env.NODE_ENV === 'development') ? '/public/js/build/main.js' : '/public/js/build/main.min.js'
 
     return (
       <html>
