@@ -1,3 +1,5 @@
+var webpack = require("webpack");
+
 module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -16,6 +18,10 @@ module.exports = {
   stats: {
     colors: true
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({minimize: true})
+  ],
+
   devtool: 'source-map',
   watch: true,
   keepalive: true

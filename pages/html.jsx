@@ -3,8 +3,6 @@ var React = require('react');
 
 class Html extends React.Component {
   render() {
-    let src_path = (process.env.NODE_ENV === 'development') ? '/public/js/build/main.js' : '/public/js/build/main.min.js'
-
     return (
       <html>
         <head>
@@ -36,7 +34,7 @@ class Html extends React.Component {
         <body>
           <div dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
         </body>
-        <script src={src_path}></script>
+        <script src='/public/js/build/main.js'></script>
       </html>
     );
   }
