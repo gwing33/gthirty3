@@ -9,3 +9,6 @@ node_modules
 _projects/
 _builds/
 _steps/
+
+*.tar
+*.log

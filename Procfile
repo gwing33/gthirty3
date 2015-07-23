@@ -1,1 +1,1 @@
-web: iojs start.js
+web: npm start
