@@ -29,6 +29,11 @@ gulp.task('webpack:dev', ['clean'], function() {
         .pipe(webpack.run());
 });
 
+gulp.task('build', ['clean'], function() {
+    gulp.src(path.resolve(webpackConfigPath))
+        .pipe(webpack.run());
+});
+
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
     gulp.watch(['**/*.jsx', 'styles/**/*.js', 'utils/**/*.js'], ['webpack:dev']);
 });
