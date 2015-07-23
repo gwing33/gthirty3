@@ -11,7 +11,7 @@ var jest = require('gulp-jest');
 gulp.task('default', ['clean', 'nodemon:app', 'build-cli-dev', 'set-dev-node-env']);
 
 gulp.task('clean', function (cb) {
-    del(['build'], cb);
+    del(['./public/js/build'], cb);
 });
 
 gulp.task('set-dev-node-env', function() {
@@ -38,14 +38,14 @@ gulp.task('webpack:dev', ['clean'], function() {
 gulp.task('webpack:prod', ['webpack:dev'], function() {
   process.env.NODE_ENV = 'production';
 
-  return gulp.src('./public/js/build/*.js')
+  return gulp.src(__dirname + '/public/js/build/*.js')
     .pipe(uglify())
     .pipe(rename(function (path) {
       if(path.extname === '.js') {
         path.basename += '.min';
       }
     }))
-    .pipe(gulp.dest('./public/js/build/'));
+    .pipe(gulp.dest(__dirname + '/public/js/build/'));
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
