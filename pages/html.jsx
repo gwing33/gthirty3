@@ -3,6 +3,8 @@ var React = require('react');
 
 class Html extends React.Component {
   render() {
+    let src_path = (process.env.NODE_ENV === 'development') ? '/public/js/build/main.js' : '/public/js/build/dist/main.js'
+
     return (
       <html>
         <head>
@@ -30,12 +32,11 @@ class Html extends React.Component {
           <meta name="msapplication-TileColor" content="#ffc40d"/>
           <meta name="msapplication-TileImage" content="/public/favicon/ms-icon-144x144.png"/>
           <meta name="theme-color" content="#ffffff"/>
-
         </head>
         <body>
           <div dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
         </body>
-        <script src="/public/js/build/main.js"></script>
+        <script src={src_path}></script>
       </html>
     );
   }

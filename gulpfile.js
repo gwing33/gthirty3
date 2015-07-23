@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var uglify = require('gulp-uglify');
 var nodemon = require('gulp-nodemon');
 var webpack = require('gulp-webpack-build');
 var path = require('path');
@@ -13,6 +14,14 @@ gulp.task('clean', function (cb) {
     del(['build'], cb);
 });
 
+gulp.task('set-dev-node-env', function() {
+    return process.env.NODE_ENV = 'development';
+});
+
+gulp.task('set-prod-node-env', function() {
+    return process.env.NODE_ENV = 'production';
+});
+
 gulp.task('nodemon:app', ['clean'], function () {
     nodemon({
       script: './start.js',
@@ -24,9 +33,15 @@ gulp.task('nodemon:app', ['clean'], function () {
     });
 });
 
-gulp.task('webpack:dev', ['clean'], function() {
+gulp.task('webpack:dev', ['clean', 'set-dev-node-env'], function() {
     gulp.src(path.resolve(webpackConfigPath))
         .pipe(webpack.run());
+});
+
+gulp.task('webpack:prod', ['webpack:dev', 'set-prod-node-env'], function() {
+  return gulp.src('public/js/build/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('public/js/build/dist'));
 });
 
 gulp.task('build-cli-dev', ['webpack:dev'], function() {
