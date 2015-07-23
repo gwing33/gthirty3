@@ -4,6 +4,7 @@ import Settings from '../settings';
 
 import StyleSheet from 'react-style';
 
+import windowDimensions from './utils/windowDimensions.jsx';
 import Icon from './icon.jsx';
 
 var styles = StyleSheet.create({
@@ -15,7 +16,6 @@ var styles = StyleSheet.create({
   },
   line: {
     marginTop: '-5px',
-    height: '80px',
     borderLeft: `1px solid ${Settings.colors.lightGray}`,
     width: '1px',
     display: 'inline-block'
@@ -23,14 +23,22 @@ var styles = StyleSheet.create({
 });
 
 class SocialItem extends React.Component {
+
   render() {
+    let max_width = 1440;
+    let min_width = 740;
+
+    // Will get correct ratio
+    let ratio = (this.props.windowWidth - min_width) / (max_width - min_width);
+    let line_height = Math.round( ratio > 1 ? 80 : (ratio < 0 ? 40 : ratio * 40 + 40) );
+
     return (
       <li styles={styles.li}>
         <a href={this.props.href} target='_blank'>
           <Icon size={35} type={this.props.type} />
         </a>
         <div>
-          <span styles={styles.line} />
+          <span styles={[styles.line, { height: line_height }]} />
         </div>
       </li>
     );
@@ -42,4 +50,4 @@ SocialItem.propTypes = {
   href: React.PropTypes.string.isRequired
 };
 
-export default SocialItem;
+export default windowDimensions(SocialItem);

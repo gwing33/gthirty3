@@ -16,7 +16,7 @@ let styles = StyleSheet.create({
 class Index extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 0' }]}>
+      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
 
         <h2>PASSION</h2>
         <hr />

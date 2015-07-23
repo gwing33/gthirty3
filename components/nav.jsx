@@ -2,28 +2,25 @@
 import React from 'react';
 import { State, Link } from 'react-router';
 import Settings from '../settings';
-
-// import MediaQuery from 'react-responsive';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
-
 import reactMixin from 'react-mixin';
-
-import Logo from '../components/logo.jsx';
+import windowDimensions from './utils/windowDimensions.jsx';
+import Logo from './logo.jsx';
 
 var styles = StyleSheet.create({
   nav: {
     width: '100%',
     height: '140px',
     borderBottom: `1px solid ${Settings.colors.lightGray}`,
-    position: 'relative'
+    position: 'relative',
+    padding: '0 15px'
   },
 
   // Brand
   brand: {
     position: 'absolute',
-    top: 0,
-    left: 0
+    top: 0
   },
 
   brand_title: {
@@ -78,6 +75,12 @@ var styles = StyleSheet.create({
 class Nav extends React.Component {
   constructor(props) {
     super(props);
+
+    this._animate.bind(this);
+
+    this.state = {
+      left: this.props.windowWidth >= 1000 ? 0 : -300
+    };
   }
 
   _onMouseEnter() {
@@ -86,6 +89,25 @@ class Nav extends React.Component {
 
   _onMouseLeave() {
     this.setState({ isHover: false });
+  }
+
+  _animate(final_width) {
+    this.interval = setInterval(() => {
+      if(this.state.left == final_width) {
+        clearInterval(this.interval)
+      } else {
+        let l = this.state.left + (final_width === 0 ? 5 : -5);
+        this.setState({
+          left: l
+        });
+      }
+    }, 10);
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    if(nextProps.windowWidth >= 1000 !== this.props.windowWidth >= 1000) {
+      this._animate( nextProps.windowWidth >= 1000 ? 0 : -300);
+    }
   }
 
   render() {
@@ -99,11 +121,9 @@ class Nav extends React.Component {
       linkStyles.push(styles.aHover);
     }
 
-    let lowRes = typeof window !== 'undefined' && window.matchMedia("(max-width: 999px)").matches;
-
     return (
       <nav styles={styles.nav}>
-        <div styles={styles.brand}>
+        <div styles={[styles.brand, { left: this.state.left }]}>
           <div styles={styles.brand_title}>gThirty</div>
           <a href='#app' styles={styles.logo}>
             <Logo size={100} />
@@ -125,4 +145,4 @@ class Nav extends React.Component {
 
 reactMixin.onClass(Nav, State);
 
-export default Nav;
+export default windowDimensions(Nav);

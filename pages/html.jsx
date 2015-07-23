@@ -7,7 +7,7 @@ class Html extends React.Component {
       <html>
         <head>
           <meta charSet="utf-8" />
-          <title>Gerald Leenerts III [gThirty3]</title>
+          <title>gThirty3 [Gerald Leenerts III]</title>
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css' />
           <link href='/public/css/base.css' rel='stylesheet' type='text/css' />
@@ -33,7 +33,7 @@ class Html extends React.Component {
 
         </head>
         <body>
-          <div id="app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
+          <div dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
         </body>
         <script src="/public/js/build/main.js"></script>
       </html>
