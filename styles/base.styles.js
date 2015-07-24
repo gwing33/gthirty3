@@ -3,8 +3,9 @@ import StyleSheet from 'react-style';
 
 export default StyleSheet.create({
   container: {
-    maxWidth: '500px',
-    margin: '0 auto'
+    maxWidth: '600px',
+    margin: '0 auto',
+    padding: '0 15px'
   },
 
   resetList: {

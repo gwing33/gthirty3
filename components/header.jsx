@@ -59,11 +59,13 @@ var styles = StyleSheet.create({
   h1: {
     fontSize: '70px',
     fontWeight: '300',
-    margin: '57px 0 0 0'
+    margin: '57px 0 0 0',
+    color: '#fff'
   },
   subtitle: {
     display: 'block',
-    fontSize: '30px'
+    fontSize: '30px',
+    color: '#fff'
   }
 });
 

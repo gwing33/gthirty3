@@ -14,7 +14,7 @@ var styles = StyleSheet.create({
     height: '140px',
     borderBottom: `1px solid ${Settings.colors.lightGray}`,
     position: 'relative',
-    padding: '0 15px'
+    padding: '0'
   },
 
   // Brand

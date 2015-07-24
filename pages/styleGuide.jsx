@@ -1,14 +1,26 @@
 'use strict';
 import React from 'react';
 import BaseStyles from '../styles/base.styles.js';
+import StyleSheet from 'react-style';
+
+let styles = StyleSheet.create({
+  h2: {
+    marginTop: '60px'
+  },
+
+  h5: {
+    marginTop: '20px'
+  }
+});
 
 class StyleGuide extends React.Component {
   render() {
     return (
       <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
         <h1>The Branding & Style Guidelines</h1>
-        <h2>The High Level Overview of Visualizing and Documenting</h2>
+        <hr />
 
+        <h2 styles={styles.h2}>The High Level Overview of Visualizing and Documenting</h2>
         <p>
           Branding does not mean just a logo.
           It goes beyond that into the realm of consistency across an entire site.
@@ -21,15 +33,17 @@ class StyleGuide extends React.Component {
         </p>
 
 
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
         <h3>THE RULES</h3>
-        <h4>From the Design's Perspective</h4>
+        <hr />
+        <h5 styles={styles.h5}>From the Design's Perspective</h5>
         <p>
           Rules help creatives be...more creative.
           As obtuce as that sounds, when you have a rule to follow you force yourself to think outside the box.
           That outside the box thinking is where creativity thrives.
         </p>
-        <h4>From the Engineer's Perspective</h4>
+
+        <h5 styles={styles.h5}>From the Engineer's Perspective</h5>
         <p>
           Engineers don't want to think too long about visual design.
           For some reason it hurts their head.
@@ -38,7 +52,7 @@ class StyleGuide extends React.Component {
           they code so they don't have to do manual labor, changing rules are manual labor.
         </p>
 
-        <h4>Rules Are and Are Not</h4>
+        <h5 styles={styles.h5}>Rules Are and Are Not</h5>
         <p>
           What is a rule?
           To me, a rule is something I must abide by.
@@ -46,8 +60,9 @@ class StyleGuide extends React.Component {
           If I come up with some really creative outside the rule, I have to think more about how I could make it work within the given rule set.
           Rules are not goals, hopes, or desires.
         </p>
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
         <h3>THE GOALS</h3>
+        <hr />
         <p>
           What does your site or app do? How can style guides help make it better?
           When you define a style guide up front, you're off loading that thought.
@@ -60,8 +75,8 @@ class StyleGuide extends React.Component {
         </p>
 
 
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         <h3>THE PROCESS</h3>
+        <hr />
         <p>
           Finally, process. I love process.
           Process is hard to get right and it can easily throw everything into chaos.
@@ -78,38 +93,20 @@ class StyleGuide extends React.Component {
           They are in charge of keeping them maintained, up-to-date and taking requests.
           Requests should be well vetted/scrutinized before implimented, but changing the style guide should be welcomed.
         </p>
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
         <h3>FINAL</h3>
+        <hr />
         <p>
           There are a lot of people doing exactly this, tweet me your favorite Branding or Style Guide! @GThirty3
         </p>
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        <h5>FOOTNOES</h5>
+
+        <h5 styles={styles.h5}>FOOTNOES</h5>
         <ol>
           <li id='note_1'>
             I believe changes should be made for customers benefits, not the businesses.
             While they will reflect wholely upon the business, great UX is user focused, not market focused.
           </li>
         </ol>
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        // Off Cuts
-        // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        <h3>THE INTERACTIONS</h3>
-        <h3>THE VERSIONING</h3>
-        <h3>THE PERFORMANCE</h3>
-        <ol>
-          <li>Create the Content</li>
-          <li>Define the brand and styles</li>
-          <li>Site Layout / Wireframes</li>
-          <li>Technology Architecture planning</li>
-          <li>Code Implimentation</li>
-        </ol>
-        <ul>
-          <li>Define my process first.</li>
-          <li>Focus on telling a story by creating a storyboard for the website.</li>
-          <li>Create and show a study around Pearl Coffee experience.</li>
-          <li>Write the an article on Style Guides and their imporances (I can check this off my list....)</li>
-        </ul>
       </div>
     );
   }

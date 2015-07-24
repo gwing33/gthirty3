@@ -36,7 +36,7 @@ gulp.task('webpack:dev', ['clean'], function() {
 gulp.task('webpack:prod', function() {
   process.env.NODE_ENV = 'production';
 
-  return gulp.src(path.resolve('./webpack.config.js'))
+  return gulp.src(path.resolve('./webpack.config.min.js'))
              .pipe(webpack.run());
 });
 
