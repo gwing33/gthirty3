@@ -54,7 +54,8 @@ var styles = StyleSheet.create({
   ol: {
     position: 'absolute',
     top: 0,
-    left: 0
+    left: 0,
+    padding: '0 15px'
   },
   a: {
     fontSize: '30px',

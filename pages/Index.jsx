@@ -16,7 +16,7 @@ let styles = StyleSheet.create({
 class Index extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 0' }]}>
+      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
 
         <h2>PASSION</h2>
         <hr />
@@ -32,7 +32,7 @@ class Index extends React.Component {
         <hr />
         <h5 styles={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></h5>
         <ul className='list'>
-          <li>Co-Founder, Lead Branding and Marketing Strategist</li>
+          <li>Co-Founder, Design and Branding Strategist</li>
           <li>Designed the full experience of the Pearl Coffee brand.</li>
           <li>Focus on eductation as a large part of our marketing strategy.</li>
         </ul>
@@ -73,19 +73,24 @@ class Index extends React.Component {
 
         <h2 styles={styles.h2}>SKILLS & READS</h2>
         <hr />
-        <h5 styles={styles.h5}>Design & Product</h5>
+        <h5 styles={styles.h5}>Processes & Methodologies</h5>
         <ul className='list'>
-          <li>UXPin and Hand Drawn Wireframes</li>
-          <li>Adobe Creative Suite: Photoshop, Illustrator, After Effects</li>
-          <li>Sketch 3</li>
+          <li>Two-way Communication</li>
+          <li>Ideation & Validation</li>
+          <li>Business Analytics</li>
+          <li>User Empathy</li>
+          <li>Implementation</li>
           <li>Jobs to be Done</li>
-          <li>Agile User Testing</li>
-        </ul>
-
-        <h5 styles={styles.h5}>Methodologies</h5>
-        <ul className='list'>
+          <li>User Testing</li>
           <li>The Hacker Way</li>
           <li>Agile / Scrum</li>
+        </ul>
+
+        <h5 styles={styles.h5}>Design & Product</h5>
+        <ul className='list'>
+          <li>UXPin and Wireframes</li>
+          <li>Adobe Creative Suite: Photoshop, Illustrator, After Effects</li>
+          <li>Sketch 3</li>
         </ul>
 
         <h5 styles={styles.h5}>Development & Engineering</h5>

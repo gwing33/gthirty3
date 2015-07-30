@@ -20,15 +20,14 @@ class StyleGuide extends React.Component {
         <h1>The Branding & Style Guidelines</h1>
         <hr />
 
-        <h2 styles={styles.h2}>The High Level Overview of Visualizing and Documenting</h2>
+        <h2 styles={styles.h2}>Visualizing and Documenting</h2>
         <p>
           Branding does not mean just a logo.
-          It goes beyond that into the realm of consistency across an entire site.
-          Which is why branding is a big key in user experience (UX).
+          It goes beyond that into the realm of consistency across an entire site which is why branding is a big indicator of user experience (UX).
         </p>
 
         <p>
-          Branding & style guidelines define your base concepts, changing a style changes those underlying foundation.
+          Branding & style guidelines define base concepts where changing a style also changes the underlying foundation.
           That foundation is made up of 3 things, rules, goals and process.
         </p>
 
@@ -36,11 +35,11 @@ class StyleGuide extends React.Component {
 
         <h3>THE RULES</h3>
         <hr />
-        <h5 styles={styles.h5}>From the Design's Perspective</h5>
+        <h5 styles={styles.h5}>From the Designer's Perspective</h5>
         <p>
-          Rules help creatives be...more creative.
-          As obtuce as that sounds, when you have a rule to follow you force yourself to think outside the box.
-          That outside the box thinking is where creativity thrives.
+          Rules help creative people be...more creative.
+          As obtuse as that sounds, when you have a rule to follow, you force yourself to think outside the box.
+          That's where creativity thrives.
         </p>
 
         <h5 styles={styles.h5}>From the Engineer's Perspective</h5>
@@ -57,7 +56,7 @@ class StyleGuide extends React.Component {
           What is a rule?
           To me, a rule is something I must abide by.
           It's something that is going to limit my range of thought.
-          If I come up with some really creative outside the rule, I have to think more about how I could make it work within the given rule set.
+          If I come up with some really creative approach and it's outside the rule, I have to think more about how I could make it work within the given rule set.
           Rules are not goals, hopes, or desires.
         </p>
 
@@ -69,8 +68,8 @@ class StyleGuide extends React.Component {
           That thought now is open to focusing on how to <i>drive your customers to what they want[<a href="#note_1">1</a>]</i>.
         </p>
         <p>
-          Not only do style guides open up for thought but you get a wholistic view of how your site looks in regards to those goals.
-          Are all your components functining in a way that would enable people to do what they need to do?
+          Not only do style guides open up for thought but you get a holistic view of how your site looks in regards to those goals.
+          Are all your components functioning in a way that would enable people to do what they need to do?
           A specific consistency will play a big role in drawing users in to your site emotionally.
         </p>
 
@@ -80,18 +79,19 @@ class StyleGuide extends React.Component {
         <p>
           Finally, process. I love process.
           Process is hard to get right and it can easily throw everything into chaos.
-          But a Style Guide defines a clear seperation of concerns, and works as a contract between 2 parties that have inherintly not worked well together.
+          But a Style Guide defines a clear separation of concerns, and works as a contract between 2 parties that have historically not worked well together.
         </p>
         <p>
           Engineers can use a style guide as documentation for how to use components that designers have standardized.
-          Deisgners can use it as a way to take advice from engineers for implimentation purposes.
+          Designers can use it as a way to take advice from engineers for implementation purposes.
           It's easy for a designer to not understand code to the point they design things that are too far out of scope of what code can do easily.
-          Maybe their design is great in a PSD, but when implimented, it lacks a certain usability finesse.
+          Maybe their design is great in a PSD, but when implemented, it lacks a certain usability finesse.
         </p>
         <p>
-          Also, you can easily structure a company to have a body of people that are in charge of maintaining the rules that the style guides have defined.
-          They are in charge of keeping them maintained, up-to-date and taking requests.
-          Requests should be well vetted/scrutinized before implimented, but changing the style guide should be welcomed.
+          Also, you can easily structure a company to have a body of people that are in charge of maintaining the rules which the style guides have defined.
+          They are in charge of keeping them up-to-date and maintained, and taking requests for revisions.
+          Requests should be well vetted and scrutinized before they are implimented.
+          However, changes to the style guide should be welcomed.
         </p>
 
         <h3>FINAL</h3>
@@ -103,8 +103,8 @@ class StyleGuide extends React.Component {
         <h5 styles={styles.h5}>FOOTNOES</h5>
         <ol>
           <li id='note_1'>
-            I believe changes should be made for customers benefits, not the businesses.
-            While they will reflect wholely upon the business, great UX is user focused, not market focused.
+            I believe changes should be made for the customers benefit, not the businesses.
+            While they will reflect wholly upon the business, great UX is user focused, not market focused.
           </li>
         </ol>
       </div>

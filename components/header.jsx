@@ -148,7 +148,7 @@ class Header extends React.Component {
           </div>
           <h1 styles={styles.h1}>
             Gerald Leenerts III
-            <span styles={styles.subtitle}>Technical UX Designer</span>
+            <span styles={styles.subtitle}>UI/UX Designer + Engineer</span>
           </h1>
         </div>
 
