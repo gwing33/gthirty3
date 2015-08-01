@@ -5,6 +5,7 @@ import StyleSheet from 'react-style';
 import { Link } from 'react-router';
 import Settings from '../settings';
 import Backdrop from '../components/Backdrop.jsx';
+import Button from '../components/Button.jsx';
 
 var styles = StyleSheet.create({
 
@@ -42,6 +43,10 @@ class Thoughts extends React.Component {
             <p styles={styles.white}>
               Exploring the benefits of style guides.
             </p>
+
+            <Button>
+              Explore the Thought
+            </Button>
           </Link>
         </Backdrop>
 

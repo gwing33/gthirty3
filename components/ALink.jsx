@@ -2,24 +2,11 @@ import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { State, Link } from 'react-router';
 import reactMixin from 'react-mixin';
+import onHover from './utils/onHover.jsx';
 
+@onHover
+@reactMixin.decorate(State)
 class ALink extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isHover: false
-    };
-  }
-
-  _onMouseEnter() {
-    this.setState({ isHover: true });
-  }
-
-  _onMouseLeave() {
-    this.setState({ isHover: false });
-  }
-
   render() {
     let props = this.props;
     let is_active = this.isActive(props.to , props.params, props.query);
@@ -27,18 +14,12 @@ class ALink extends Component {
     let styles = [
       props.styles,
       is_active ? props.activeStyles : {},
-      this.state.isHover ? props.hoverStyles : {}
+      props.isHover ? props.hoverStyles : {}
     ];
 
     return (
-      <Link
-        to={props.to}
-        params={props.params}
-        query={props.query}
-        styles={styles}
-        onMouseEnter={this._onMouseEnter.bind(this)}
-        onMouseLeave={this._onMouseLeave.bind(this)}>
-          {this.props.children}
+      <Link to={props.to} params={props.params} query={props.query} styles={styles}>
+        {this.props.children}
       </Link>
     );
   }
@@ -58,7 +39,5 @@ ALink.defaultProps = {
   hoverStyles: {},
   styles: {}
 };
-
-reactMixin.onClass(ALink, State);
 
 export default ALink;
