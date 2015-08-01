@@ -1,4 +1,5 @@
 import React from 'react';
+import ResponsiveUtil from '../../utils/ResponsiveUtil';
 
 let windowDimensions = function(Component) {
 
@@ -6,32 +7,15 @@ let windowDimensions = function(Component) {
     constructor(props) {
       super(props);
 
-      // this._getSize.bind(this);
-      // this._handleResize.bind(this);
-
-      this.state = this._getSize();
-    }
-
-    _isWindowDefined() {
-      return typeof window !== 'undefined';
-    }
-
-    _getSize() {
-      let width = this._isWindowDefined() ? window.innerWidth : -1;
-      let height = this._isWindowDefined() ? window.innerHeight : -1;
-
-      return {
-        windowWidth: width,
-        windowHeight: height
-      };
+      this.state = ResponsiveUtil.getSize();
     }
 
     _handleResize(e) {
-      this.setState( this._getSize() );
+      this.setState( ResponsiveUtil.getSize() );
     }
 
     componentDidMount() {
-      if(this._isWindowDefined()) {
+      if(ResponsiveUtil.isWindowDefined()) {
         window.addEventListener('resize', this._handleResize.bind(this) );
       }
     }

@@ -29,8 +29,9 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Layout content.~~
     - [x] ~~Wireframe website.~~
     - [x] ~~Responsive Design thought.~~
-    - [ ] Add in "Studies."
-    - [ ] Add in "Thoughts."
+    - [x] ~~Add in "Thoughts."~~
+    - [ ] Create the Living Style Guide. (In Progress)
+    - [ ] Add in "Studies."(In Progress)
 - [ ] Technical
     - [x] ~~Add Wercker as Build System.~~
     - [x] ~~Setup ExpressJS Server~~
@@ -39,6 +40,9 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Add Styles from Design.~~
     - [x] ~~Make Responsive.~~
     - [x] ~~Set Heroku to Deploy Code.~~
-    - [ ] Refactor Responsive Code. (In Progress)
-    - [ ] Build Style Guide. (In Progress)
-    - [ ] Add in Routing, probably pull in modular react router.
+    - [x] ~~Refactor Responsive Code.~
+    - [x] ~~Create a Responsive utility for easy scaling~~
+    - [x] ~~Fix the Navigation~~
+    - [ ] Impliment the living style guide. (In Progress)
+    - [ ] Pull in instagram photos (In Progress)
+    - [ ] Build Style Guide.

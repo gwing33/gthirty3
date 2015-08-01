@@ -4,6 +4,7 @@ import Settings from '../settings';
 
 import StyleSheet from 'react-style';
 
+import ResponsiveUtil from '../utils/ResponsiveUtil';
 import windowDimensions from './utils/windowDimensions.jsx';
 import Icon from './Icon.jsx';
 
@@ -22,6 +23,7 @@ var styles = StyleSheet.create({
   }
 });
 
+@windowDimensions
 class SocialItem extends React.Component {
 
   render() {
@@ -30,7 +32,7 @@ class SocialItem extends React.Component {
 
     // Will get correct ratio
     let ratio = (this.props.windowWidth - min_width) / (max_width - min_width);
-    let line_height = Math.round( ratio > 1 ? 80 : (ratio < 0 ? 40 : ratio * 40 + 40) );
+    let line_height = ResponsiveUtil.calcOffWidth(40, 80);
 
     return (
       <li styles={styles.li}>
@@ -50,4 +52,4 @@ SocialItem.propTypes = {
   href: React.PropTypes.string.isRequired
 };
 
-export default windowDimensions(SocialItem);
+export default SocialItem;

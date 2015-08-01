@@ -1,6 +1,6 @@
 'use strict';
 import React from 'react';
-import BaseStyles from '../styles/base.styles.js';
+import BaseStyles from '../../styles/base.styles.js';
 import StyleSheet from 'react-style';
 
 let styles = StyleSheet.create({

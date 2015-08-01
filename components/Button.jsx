@@ -36,7 +36,7 @@ var styles = StyleSheet.create({
   },
   tertiaryHov: {
     backgroundColor: Settings.colors.darkGray
-  },
+  }
 });
 
 @onHover
