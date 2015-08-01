@@ -1,6 +1,7 @@
 module.exports = {
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.json', '.jsx']
   },
   entry: './client.js',
   output: {
@@ -10,7 +11,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: require.resolve('babel-loader') }
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: require.resolve('babel-loader') },
+      { test: /\.json$/, loader: "json-loader" }
     ]
   },
   stats: {

@@ -97,7 +97,7 @@ a {
 }
 a:hover {
   color: #328BD6;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /**

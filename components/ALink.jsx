@@ -7,12 +7,6 @@ class ALink extends Component {
   constructor(props) {
     super(props);
 
-    this.props = {
-      activeStyles: {},
-      hoverStyles: {},
-      styles: {}
-    };
-
     this.state = {
       isHover: false
     };
@@ -57,6 +51,12 @@ ALink.propTypes = {
   isActive: PropTypes.bool,
   activeStyles: PropTypes.object,
   hoverStyles: PropTypes.object
+};
+
+ALink.defaultProps = {
+  activeStyles: {},
+  hoverStyles: {},
+  styles: {}
 };
 
 reactMixin.onClass(ALink, State);

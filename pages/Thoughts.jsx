@@ -3,6 +3,26 @@ import React from 'react';
 import BaseStyles from '../styles/base.styles.js';
 import StyleSheet from 'react-style';
 import { Link } from 'react-router';
+import Settings from '../settings';
+import Backdrop from '../components/Backdrop.jsx';
+
+var styles = StyleSheet.create({
+
+  backdrop: {
+    backgroundColor: Settings.colors.blue
+  },
+
+  link: {
+    textAlign: 'center',
+    padding: '40px',
+    display: 'block'
+  },
+
+  white: {
+    color: '#ffffff'
+  }
+
+});
 
 class Thoughts extends React.Component {
   render() {
@@ -14,14 +34,16 @@ class Thoughts extends React.Component {
           Various ideas on what I'm really passionate about.
         </p>
 
-        <Link to='style-guide'>
-          <h3>
-            The Branding & Style Guidelines
-          </h3>
-          <p>
-            Exploring the benefits of style guides.
-          </p>
-        </Link>
+        <Backdrop styles={styles.backdrop}>
+          <Link to='style-guide' styles={styles.link}>
+            <h3 styles={styles.white}>
+              The Branding & Style Guidelines
+            </h3>
+            <p styles={styles.white}>
+              Exploring the benefits of style guides.
+            </p>
+          </Link>
+        </Backdrop>
 
       </div>
     );
