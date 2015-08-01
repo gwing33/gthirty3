@@ -1,12 +1,11 @@
 'use strict';
 import React from 'react';
-import { State, Link } from 'react-router';
 import Settings from '../settings';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
-import reactMixin from 'react-mixin';
 import windowDimensions from './utils/windowDimensions.jsx';
-import Logo from './logo.jsx';
+import Logo from './Logo.jsx';
+import ALink from './ALink.jsx';
 
 var styles = StyleSheet.create({
   nav: {
@@ -57,6 +56,12 @@ var styles = StyleSheet.create({
     left: 0,
     padding: '0 15px'
   },
+
+  li: {
+    display: 'inline-block',
+    marginRight: '60px'
+  },
+
   a: {
     fontSize: '30px',
     color: Settings.colors.darkGray,
@@ -65,9 +70,13 @@ var styles = StyleSheet.create({
     textDecoration: 'none',
     display: 'inline-block'
   },
+
   aActive: {
-    borderBottom: `3px solid ${Settings.colors.blue}`
+    borderBottomWidth: '3px',
+    borderBottomColor: Settings.colors.blue,
+    borderBottomStyle: 'solid'
   },
+
   aHover: {
     color: Settings.colors.blue
   }
@@ -82,14 +91,6 @@ class Nav extends React.Component {
     this.state = {
       left: this.props.windowWidth >= 1000 ? 0 : -300
     };
-  }
-
-  _onMouseEnter() {
-    this.setState({ isHover: true });
-  }
-
-  _onMouseLeave() {
-    this.setState({ isHover: false });
   }
 
   _animate(final_width) {
@@ -112,16 +113,6 @@ class Nav extends React.Component {
   }
 
   render() {
-    let linkStyles = [styles.a];
-
-    if(this.isActive('index')) {
-      linkStyles.push(styles.aActive);
-    }
-
-    if(this.state && this.state.isHover) {
-      linkStyles.push(styles.aHover);
-    }
-
     return (
       <nav styles={styles.nav}>
         <div styles={[styles.brand, { left: this.state.left }]}>
@@ -133,8 +124,23 @@ class Nav extends React.Component {
 
         <div styles={[BaseStyles.container, styles.container]}>
           <ol styles={[BaseStyles.resetList, styles.ol]}>
-            <li>
-              <Link onMouseEnter={this._onMouseEnter.bind(this)} onMouseLeave={this._onMouseLeave.bind(this)} styles={ linkStyles } to='index'>About</Link>
+            <li styles={styles.li}>
+              <ALink
+                activeStyles={styles.aActive}
+                hoverStyles={styles.aHover}
+                styles={styles.a}
+                to='index'>
+                  About
+              </ALink>
+            </li>
+            <li styles={styles.li}>
+              <ALink
+                activeStyles={styles.aActive}
+                hoverStyles={styles.aHover}
+                styles={styles.a}
+                to='thoughts'>
+                  Thoughts
+              </ALink>
             </li>
           </ol>
         </div>
@@ -143,7 +149,5 @@ class Nav extends React.Component {
     );
   }
 }
-
-reactMixin.onClass(Nav, State);
 
 export default windowDimensions(Nav);

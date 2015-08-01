@@ -4,8 +4,8 @@ import Settings from '../settings';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
 import windowDimensions from './utils/windowDimensions.jsx';
-import Social from './social.jsx';
-import Logo from './logo.jsx';
+import Social from './Social.jsx';
+import Logo from './Logo.jsx';
 
 
 var styles = StyleSheet.create({

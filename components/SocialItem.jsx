@@ -5,7 +5,7 @@ import Settings from '../settings';
 import StyleSheet from 'react-style';
 
 import windowDimensions from './utils/windowDimensions.jsx';
-import Icon from './icon.jsx';
+import Icon from './Icon.jsx';
 
 var styles = StyleSheet.create({
   li: {

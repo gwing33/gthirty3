@@ -5,7 +5,7 @@ import React from 'react';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
 
-import SocialItem from './socialItem.jsx';
+import SocialItem from './SocialItem.jsx';
 
 var styles = StyleSheet.create({
   social: {

@@ -13,8 +13,8 @@ import React from 'react';
 import ReactRouter from 'react-router';
 
 import url from 'url';
-import Html from './pages/html.jsx';
-import AppRoutes from './routes/routes.jsx';
+import Html from './pages/Html.jsx';
+import AppRoutes from './routes/Routes.jsx';
 // const htmlComponent = React.createFactory(HtmlComponent);
 
 const debug = debugLib('gthirty3');
