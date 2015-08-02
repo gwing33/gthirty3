@@ -9,10 +9,6 @@ import Button from '../components/Button.jsx';
 
 var styles = StyleSheet.create({
 
-  backdrop: {
-    backgroundColor: Settings.colors.blue
-  },
-
   link: {
     textAlign: 'center',
     padding: '40px',
@@ -35,13 +31,28 @@ class Thoughts extends React.Component {
           Various ideas on what I'm really passionate about.
         </p>
 
-        <Backdrop styles={styles.backdrop}>
+        <Backdrop styles={{ backgroundColor: Settings.colors.green, marginBottom: '60px' }}>
           <Link to='style-guide' styles={styles.link}>
             <h3 styles={styles.white}>
               The Branding & Style Guidelines
             </h3>
             <p styles={styles.white}>
               Exploring the benefits of style guides.
+            </p>
+
+            <Button>
+              Explore the Thought
+            </Button>
+          </Link>
+        </Backdrop>
+
+        <Backdrop styles={{ backgroundColor: Settings.colors.blue}}>
+          <Link to='user-flows' styles={styles.link}>
+            <h3 styles={styles.white}>
+              User Flows and Stories
+            </h3>
+            <p styles={styles.white}>
+              Starting a project and understanding your target.
             </p>
 
             <Button>

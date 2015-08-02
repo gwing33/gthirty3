@@ -1,3 +1,5 @@
+var webpack = require("webpack");
+
 module.exports = {
   resolve: {
     // you can now require('file') instead of require('file.coffee')
@@ -18,7 +20,9 @@ module.exports = {
   stats: {
     colors: true
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({GA_TRACKING_CODE: JSON.stringify('UA-65878449-1')})
+  ],
 
   devtool: 'source-map',
   watch: true,

@@ -30,8 +30,12 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Wireframe website.~~
     - [x] ~~Responsive Design thought.~~
     - [x] ~~Add in "Thoughts."~~
-    - [ ] Create the Living Style Guide. (In Progress)
-    - [ ] Add in "Studies."(In Progress)
+    - [x] ~~Create User Flow~~
+    - [x] ~~Create the Living Style Guide.~~
+    - [x] ~~Create CodeDemo Design~~
+    - [ ] Design Studies
+    - [ ] Write article about User Flows
+    - [ ] Article signage / publish datestamp
 - [ ] Technical
     - [x] ~~Add Wercker as Build System.~~
     - [x] ~~Setup ExpressJS Server~~
@@ -43,6 +47,7 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Refactor Responsive Code.~
     - [x] ~~Create a Responsive utility for easy scaling~~
     - [x] ~~Fix the Navigation~~
+    - [x] ~~Add in Google Analytics~~
     - [ ] Impliment the living style guide. (In Progress)
-    - [ ] Pull in instagram photos (In Progress)
-    - [ ] Build Style Guide.
+    - [ ] Pull in instagram photos
+    - [ ] Navigation to place text equidistant from each other.

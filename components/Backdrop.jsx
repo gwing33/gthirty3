@@ -1,3 +1,4 @@
+'use strict';
 import React, { PropTypes } from 'react';
 import Color from 'color';
 import StyleSheet from 'react-style';

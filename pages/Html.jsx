@@ -1,5 +1,5 @@
 'use strict';
-var React = require('react');
+import React from 'react';
 
 class Html extends React.Component {
   render() {
@@ -11,6 +11,8 @@ class Html extends React.Component {
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <link href='//fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css' />
           <link href='/public/css/base.css' rel='stylesheet' type='text/css' />
+          <link href='/public/css/highlight/default.css' rel='stylesheet' type='text/css' />
+          <link href='/public/css/highlight/github.css' rel='stylesheet' type='text/css' />
 
           <link rel="apple-touch-icon" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/public/favicon/apple-touch-icon-60x60.png"/>

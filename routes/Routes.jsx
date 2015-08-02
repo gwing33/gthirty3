@@ -16,7 +16,7 @@ let Routes = (
 
     <Route name='thoughts' path='thoughts/?'>
       <Route name='style-guide' path='style-guide/?' handler={StyleGuide} />
-      <Route name='user-flow' path='user-flow/?' handler={UserFlows} />
+      <Route name='user-flows' path='user-flows/?' handler={UserFlows} />
       <DefaultRoute handler={Thoughts} />
     </Route>
 

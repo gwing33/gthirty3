@@ -6,6 +6,7 @@ import BaseStyles from '../styles/base.styles.js';
 import windowDimensions from './utils/windowDimensions.jsx';
 import ResponsiveUtil from '../utils/ResponsiveUtil';
 import Logo from './Logo.jsx';
+import { Link } from 'react-router';
 import ALink from './ALink.jsx';
 import Sticky from 'react-sticky';
 
@@ -13,7 +14,7 @@ var styles = StyleSheet.create({
   sticky: {
     position: 'relative',
     width: '100%',
-    zIndex: 1
+    zIndex: 1000
   },
 
   nav: {
@@ -140,9 +141,9 @@ class Nav extends React.Component {
           <nav styles={nav}>
             <div styles={[styles.brand, { left: left }]}>
               <div styles={brand_title}>gThirty</div>
-              <a href='#app' styles={logo}>
+              <Link to='index' styles={logo}>
                 <Logo size={ResponsiveUtil.calcOffWidth(50, 100)} />
-              </a>
+              </Link>
             </div>
 
             <div styles={[BaseStyles.container, styles.container]}>

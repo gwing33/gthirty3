@@ -1,3 +1,4 @@
+'use strict';
 import React, { Component } from 'react';
 import StyleSheet from 'react-style';
 import onHover from './utils/onHover.jsx';

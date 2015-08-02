@@ -1,3 +1,4 @@
+'use strict';
 import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { State, Link } from 'react-router';
