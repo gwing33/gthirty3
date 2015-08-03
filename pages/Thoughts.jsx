@@ -4,6 +4,8 @@ import BaseStyles from '../styles/base.styles.js';
 import StyleSheet from 'react-style';
 import { Link } from 'react-router';
 import Settings from '../settings';
+
+import Title from '../components/Title.jsx';
 import Backdrop from '../components/Backdrop.jsx';
 import Button from '../components/Button.jsx';
 
@@ -26,16 +28,16 @@ class Thoughts extends React.Component {
     return (
       <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
 
-        <h2>THOUGHTS</h2>
+        <Title importance='2'>THOUGHTS</Title>
         <p>
           Various ideas on what I'm really passionate about.
         </p>
 
         <Backdrop styles={{ backgroundColor: Settings.colors.green, marginBottom: '60px' }}>
           <Link to='style-guide' styles={styles.link}>
-            <h3 styles={styles.white}>
+            <Title importance='3' styles={styles.white}>
               The Branding & Style Guidelines
-            </h3>
+            </Title>
             <p styles={styles.white}>
               Exploring the benefits of style guides.
             </p>
@@ -48,9 +50,9 @@ class Thoughts extends React.Component {
 
         <Backdrop styles={{ backgroundColor: Settings.colors.blue}}>
           <Link to='user-flows' styles={styles.link}>
-            <h3 styles={styles.white}>
+            <Title importance='3' styles={styles.white}>
               User Flows and Stories
-            </h3>
+            </Title>
             <p styles={styles.white}>
               Starting a project and understanding your target.
             </p>

@@ -4,10 +4,13 @@ import Settings from '../settings';
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
 import ResponsiveUtil from '../utils/ResponsiveUtil';
+
 import windowDimensions from './utils/windowDimensions.jsx';
+
 import Social from './Social.jsx';
 import Logo from './Logo.jsx';
 import Backdrop from './Backdrop.jsx';
+import Title from './Title.jsx';
 
 var styles = StyleSheet.create({
   backdrop: { backgroundColor: '#56595C' },
@@ -26,10 +29,10 @@ var styles = StyleSheet.create({
   },
 
   h1: {
-    fontWeight: '300',
     margin: '57px 0 0 0',
     color: '#fff'
   },
+
   subtitle: {
     display: 'block',
     color: '#fff'
@@ -59,10 +62,10 @@ class Header extends React.Component {
             <div>
               <Logo size={ResponsiveUtil.calcOffWidth(100, 150)} fill="#1D1E21" />
             </div>
-            <h1 styles={[styles.h1, h1]}>
+            <Title isThin={true} styles={[styles.h1, h1]}>
               Gerald Leenerts III
               <span styles={[styles.subtitle, subtitle]}>UI/UX Designer + Engineer</span>
-            </h1>
+            </Title>
           </div>
 
           <Social />

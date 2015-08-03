@@ -1,7 +1,8 @@
 'use strict';
 import React from 'react';
-import BaseStyles from '../styles/base.styles.js';
+import BaseStyles from '../styles/base.styles';
 import StyleSheet from 'react-style';
+import Title from '../components/Title.jsx';
 
 let styles = StyleSheet.create({
   h2: {
@@ -18,7 +19,7 @@ class Index extends React.Component {
     return (
       <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
 
-        <h2>PASSION</h2>
+        <Title importance={2}>PASSION</Title>
         <hr />
         <p>
           I have a desire to create a great scalable branding experience for companies. Branding is not just about a great logo, it also entails consistent look throughout a website or suite of products. A great style/branding guide makes the UX better, because you change core concepts and not just the surface design.
@@ -28,16 +29,16 @@ class Index extends React.Component {
         </p>
 
 
-        <h2 styles={styles.h2}>EXPERIENCES</h2>
+        <Title importance={2} styles={styles.h2}>EXPERIENCES</Title>
         <hr />
-        <h5 styles={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></h5>
+        <Title importance={5} styles={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></Title>
         <ul className='list'>
           <li>Co-Founder, Design and Branding Strategist</li>
           <li>Designed the full experience of the Pearl Coffee brand.</li>
           <li>Focus on eductation as a large part of our marketing strategy.</li>
         </ul>
 
-        <h5 styles={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></h5>
+        <Title importance={5} styles={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></Title>
         <ul className='list'>
           <li>Senior UX Developer / Senior Front-end Engineer / Senior Software Engineer</li>
           <li>React / Flux lead engineer.</li>
@@ -45,7 +46,7 @@ class Index extends React.Component {
           <li>Focused on creating a style guide that both Engineers and Designers can work on as a point of hand off and documentation for branding consistency.</li>
         </ul>
 
-        <h5 styles={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></h5>
+        <Title importance={5} styles={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></Title>
         <ul className='list'>
           <li>UI/UX Designer</li>
           <li>Redesigned the entire front-end of SpyFu.com, had to work around the large data aspect.</li>
@@ -55,7 +56,7 @@ class Index extends React.Component {
         </ul>
 
 
-        <h5 styles={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></h5>
+        <Title importance={5} styles={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></Title>
         <ul className='list'>
           <li>UI/UX Designer</li>
           <li>Worked with the auther of Doonsebury to create their website, helping them understand the difference between print and web design.</li>
@@ -64,16 +65,16 @@ class Index extends React.Component {
         </ul>
 
 
-        <h2 styles={styles.h2}>EDUCATION</h2>
-        <h5 styles={styles.h5}>Bachelors of Fine Arts with an emphasis in Computer Animation</h5>
+        <Title importance={2} styles={styles.h2}>EDUCATION</Title>
+        <Title importance={5} styles={styles.h5}>Bachelors of Fine Arts with an emphasis in Computer Animation</Title>
         <ul className='list'>
           <li>Missouri State University</li>
         </ul>
 
 
-        <h2 styles={styles.h2}>SKILLS & READS</h2>
+        <Title importance={2} styles={styles.h2}>SKILLS & READS</Title>
         <hr />
-        <h5 styles={styles.h5}>Processes & Methodologies</h5>
+        <Title importance={2} styles={styles.h5}>Processes & Methodologies</Title>
         <ul className='list'>
           <li>Two-way Communication</li>
           <li>Ideation & Validation</li>
@@ -86,14 +87,14 @@ class Index extends React.Component {
           <li>Agile / Scrum</li>
         </ul>
 
-        <h5 styles={styles.h5}>Design & Product</h5>
+        <Title importance={5} styles={styles.h5}>Design & Product</Title>
         <ul className='list'>
           <li>UXPin and Wireframes</li>
           <li>Adobe Creative Suite: Photoshop, Illustrator, After Effects</li>
           <li>Sketch 3</li>
         </ul>
 
-        <h5 styles={styles.h5}>Development & Engineering</h5>
+        <Title importance={5} styles={styles.h5}>Development & Engineering</Title>
         <ul className='list'>
           <li>JavaScript: React, Flux, BackboneJS, MV* Patterns</li>
           <li>LESS / SASS / CSS / HTML</li>
@@ -103,7 +104,7 @@ class Index extends React.Component {
           <li>Bash Scripting, Docker, TeamCity, Jenkins, Octopus Deploy, TravisCI</li>
         </ul>
 
-        <h5 styles={styles.h5}>Favorite Books</h5>
+        <Title importance={5} styles={styles.h5}>Favorite Books</Title>
         <ul className='list'>
           <li>Don't make me Think</li>
           <li>Design of Everyday Things</li>

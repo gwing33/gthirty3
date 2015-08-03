@@ -2,6 +2,7 @@
 import React from 'react';
 import BaseStyles from '../../styles/base.styles.js';
 import StyleSheet from 'react-style';
+import Title from '../../components/Title.jsx';
 
 let styles = StyleSheet.create({
   h2: {
@@ -17,10 +18,10 @@ class StyleGuide extends React.Component {
   render() {
     return (
       <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
-        <h1>The Branding & Style Guidelines</h1>
+        <Title>The Branding & Style Guidelines</Title>
         <hr />
 
-        <h2 styles={styles.h2}>Visualizing and Documenting</h2>
+        <Title importance={2} styles={styles.h2}>Visualizing and Documenting</Title>
         <p>
           Branding does not mean just a logo.
           It goes beyond that into the realm of consistency across an entire site which is why branding is a big indicator of user experience (UX).
@@ -31,9 +32,7 @@ class StyleGuide extends React.Component {
           That foundation is made up of 3 things, rules, goals and process.
         </p>
 
-
-
-        <h3>THE RULES</h3>
+        <Title importance={3}>THE RULES</Title>
         <hr />
         <h5 styles={styles.h5}>From the Designer's Perspective</h5>
         <p>
@@ -60,7 +59,7 @@ class StyleGuide extends React.Component {
           Rules are not goals, hopes, or desires.
         </p>
 
-        <h3>THE GOALS</h3>
+        <Title importance={3}>THE GOALS</Title>
         <hr />
         <p>
           What does your site or app do? How can style guides help make it better?
@@ -74,7 +73,7 @@ class StyleGuide extends React.Component {
         </p>
 
 
-        <h3>THE PROCESS</h3>
+        <Title importance={3}>THE PROCESS</Title>
         <hr />
         <p>
           Finally, process. I love process.
@@ -94,13 +93,13 @@ class StyleGuide extends React.Component {
           However, changes to the style guide should be welcomed.
         </p>
 
-        <h3>FINAL</h3>
+        <Title importance={3}>FINAL</Title>
         <hr />
         <p>
           There are a lot of people doing exactly this, tweet me your favorite Branding or Style Guide! @GThirty3
         </p>
 
-        <h5 styles={styles.h5}>FOOTNOES</h5>
+        <Title importance={5} styles={styles.h5}>FOOTNOES</Title>
         <ol>
           <li id='note_1'>
             I believe changes should be made for the customers benefit, not the businesses.

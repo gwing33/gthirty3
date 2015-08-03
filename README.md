@@ -21,7 +21,7 @@ It's on Heroku, so just push to master and it'll auto deploy.
 - Home (About, Experience, what I do)
 - Study - Different projects I take on, will publish an article on the outcome.
 - Thoughts - Simple articles of thought.
-- Style Guide - Where all my styles come in to play.
+- Living Style Guide - Where all my styles come in to play.
 
 #### TODO
 - [ ] Design
@@ -33,7 +33,7 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Create User Flow~~
     - [x] ~~Create the Living Style Guide.~~
     - [x] ~~Create CodeDemo Design~~
-    - [ ] Design Studies
+    - [ ] Design Studies. (In Progress)
     - [ ] Write article about User Flows
     - [ ] Article signage / publish datestamp
 - [ ] Technical
@@ -44,10 +44,10 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Add Styles from Design.~~
     - [x] ~~Make Responsive.~~
     - [x] ~~Set Heroku to Deploy Code.~~
-    - [x] ~~Refactor Responsive Code.~
+    - [x] ~~Refactor Responsive Code.~~
     - [x] ~~Create a Responsive utility for easy scaling~~
     - [x] ~~Fix the Navigation~~
     - [x] ~~Add in Google Analytics~~
-    - [ ] Impliment the living style guide. (In Progress)
-    - [ ] Pull in instagram photos
+    - [ ] Impliment the living style guide & update site with it. (In Progress)
+    - [ ] Pull in instagram photos. (In Progress)
     - [ ] Navigation to place text equidistant from each other.
