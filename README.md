@@ -48,6 +48,12 @@ It's on Heroku, so just push to master and it'll auto deploy.
     - [x] ~~Create a Responsive utility for easy scaling~~
     - [x] ~~Fix the Navigation~~
     - [x] ~~Add in Google Analytics~~
-    - [ ] Impliment the living style guide & update site with it. (In Progress)
+    - [x] ~~Impliment the living style guide & update site with it.~~
+        - [x] ~~User Stories & Flows~~
+        - [x] ~~Titles~~
+        - [x] ~~Button~~
+        - [x] ~~ALink~~
+        - [x] ~~Logo~~
+        - [x] ~~Backdrop~~
     - [ ] Pull in instagram photos. (In Progress)
     - [ ] Navigation to place text equidistant from each other.

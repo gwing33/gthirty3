@@ -1,7 +1,9 @@
 'use strict';
+import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import Color from 'color';
 import StyleSheet from 'react-style';
+import Settings from '../settings';
 
 var styles = StyleSheet.create({
   backdrop: {
@@ -23,6 +25,7 @@ var styles = StyleSheet.create({
     top: '-85%',
     zIndex: '10',
   },
+
   backdrop2: {
     top: '-33%',
     zIndex: '5',
@@ -31,7 +34,8 @@ var styles = StyleSheet.create({
 
 class Backdrop extends React.Component {
   render() {
-    let bgc = this.props.styles.backgroundColor;
+    let styl = _.merge({ backgroundColor: Settings.colors.darkGray }, this.props.styles);
+    let bgc = styl.backgroundColor;
     let c1 = Color(bgc), c2 = Color(bgc);
     let is_dark = this.props.isDark;
 
@@ -39,7 +43,7 @@ class Backdrop extends React.Component {
     styles.backdrop2.backgroundColor = (is_dark ? c2.darken(0.075) : c2.lighten(0.075)).rgbString();
 
     return (
-      <div styles={[styles.backdrop, this.props.styles]}>
+      <div styles={[styles.backdrop, styl]}>
         <div styles={[styles.backdropBg, styles.backdrop1]}/>
         <div styles={[styles.backdropBg, styles.backdrop2]}/>
         <div styles={{ position: 'relative', zIndex: '15' }}>
@@ -52,11 +56,12 @@ class Backdrop extends React.Component {
 
 Backdrop.propTypes = {
   isDark: PropTypes.bool,
-  styles: PropTypes.any.isRequired
+  styles: PropTypes.object
 };
 
 Backdrop.defaultProps = {
-  isDark: true
+  isDark: true,
+  styles: {}
 };
 
 export default Backdrop;

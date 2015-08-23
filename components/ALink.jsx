@@ -4,6 +4,18 @@ import React, { Component, PropTypes } from 'react';
 import { State, Link } from 'react-router';
 import reactMixin from 'react-mixin';
 import onHover from './utils/onHover.jsx';
+import StyleSheet from 'react-style';
+import Settings from '../settings';
+
+var styles = StyleSheet.create({
+//  active: { },
+  hover: {
+    color: Settings.colors.blue
+  },
+  base: {
+    color: Settings.colors.darkGray
+  }
+});
 
 @onHover
 @reactMixin.decorate(State)
@@ -12,14 +24,17 @@ class ALink extends Component {
     let props = this.props;
     let is_active = this.isActive(props.to , props.params, props.query);
 
-    let styles = [
+    let styls = [
+      styles.base,
       props.styles,
+      //is_active ? styles.active : {},
       is_active ? props.activeStyles : {},
+      props.isHover ? styles.hover : {},
       props.isHover ? props.hoverStyles : {}
     ];
 
     return (
-      <Link to={props.to} params={props.params} query={props.query} styles={styles}>
+      <Link to={props.to} params={props.params} query={props.query} styles={styls}>
         {this.props.children}
       </Link>
     );

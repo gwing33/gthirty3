@@ -34,6 +34,7 @@ Logo.propTypes = {
   size: React.PropTypes.number,
   fill: React.PropTypes.string
 };
+
 Logo.defaultProps = {
   size: ORIGIANL_SIZE,
   fill: '#5C5F62'

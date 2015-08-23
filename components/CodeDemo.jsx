@@ -7,7 +7,7 @@ class CodeDemo extends Component {
     var desc = this.props.description ? <p>{this.props.description}</p> : "";
 
     return(
-      <div>
+      <div styles={{ marginTop: '80px' }}>
         <hr />
 
         <div styles={{ padding: '40px 0' }}>

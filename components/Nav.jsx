@@ -75,10 +75,8 @@ var styles = StyleSheet.create({
 
   a: {
     fontSize: '30px',
-    color: Settings.colors.darkGray,
     lineHeight: '142px',
     height: '142px',
-    textDecoration: 'none',
     display: 'inline-block'
   },
 
@@ -86,10 +84,6 @@ var styles = StyleSheet.create({
     borderBottomWidth: '3px',
     borderBottomColor: Settings.colors.blue,
     borderBottomStyle: 'solid'
-  },
-
-  aHover: {
-    color: Settings.colors.blue
   }
 });
 
