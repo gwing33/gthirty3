@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 import DocumentMeta from 'react-document-meta';
 // import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 // import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 // import { createTransitionHook } from 'helpers/universalRouter';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
 
 const title = 'Gerald Leenerts [ III ]';
 const description = 'Gerald\'s thoughts and activities';
@@ -90,13 +91,8 @@ export default class App extends Component {
     return (
       <div>
         <DocumentMeta {...meta}/>
-        <nav>
-          <div>
-            <Link to="/">
-              gThirty3
-            </Link>
-          </div>
-        </nav>
+        <Header />
+        <Nav />
         <div>
           {this.props.children}
         </div>
