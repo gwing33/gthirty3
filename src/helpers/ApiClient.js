@@ -9,7 +9,7 @@ import config from '../config';
  * Remove it at your own risk.
  */
 class ApiClient_ {
-  constructor(req) {
+  constructor(/* req */) {
     this.fetch = (path, options) => fetch(this.formatUrl(path), options);
   }
 

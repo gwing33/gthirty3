@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+// import { connect } from 'react-redux';
 import DocumentMeta from 'react-document-meta';
 // import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 // import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
-import { createTransitionHook } from 'helpers/universalRouter';
+// import { createTransitionHook } from 'helpers/universalRouter';
 
 const title = 'Gerald Leenerts [ III ]';
 const description = 'Gerald\'s thoughts and activities';
@@ -43,32 +43,33 @@ export default class App extends Component {
   }
 
   static contextTypes = {
-    router: PropTypes.object.isRequired,
-    store: PropTypes.object.isRequired
+    // router: PropTypes.object.isRequired,
+    // store: PropTypes.object.isRequired
   };
 
   componentWillMount() {
-    const {router, store} = this.context;
-    this.transitionHook = createTransitionHook(store);
-    router.addTransitionHook(this.transitionHook);
+    // const {router} = this.context;
+    // const {router, store} = this.context;
+    // this.transitionHook = createTransitionHook(store);
+    // router.addTransitionHook(this.transitionHook);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.user && nextProps.user) {
-      // login
-      this.context.router.transitionTo('/loginSuccess');
-    } else if (this.props.user && !nextProps.user) {
-      // logout
-      this.context.router.transitionTo('/');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (!this.props.user && nextProps.user) {
+  //     // login
+  //     this.context.router.transitionTo('/loginSuccess');
+  //   } else if (this.props.user && !nextProps.user) {
+  //     // logout
+  //     this.context.router.transitionTo('/');
+  //   }
+  // }
 
   componentWillUnmount() {
-    const {router} = this.context;
-    router.removeTransitionHook(this.transitionHook);
+    // const {router} = this.context;
+    // router.removeTransitionHook(this.transitionHook);
   }
 
-  static fetchData(store) {
+  static fetchData(/* store */) {
     const promises = [];
     // if (!isInfoLoaded(store.getState())) {
     //   promises.push(store.dispatch(loadInfo()));
@@ -85,7 +86,7 @@ export default class App extends Component {
   }
 
   render() {
-    const {user} = this.props;
+    // const {user} = this.props;
     return (
       <div>
         <DocumentMeta {...meta}/>
