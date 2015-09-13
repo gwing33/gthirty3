@@ -2,13 +2,11 @@
 .DS_Store
 
 # Node
-build
 node_modules
-
-# Wercker
-_projects/
-_builds/
-_steps/
+dist/
+*.iml
+webpack-stats.json
+npm-debug.log
 
 *.tar
 *.log
