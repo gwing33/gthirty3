@@ -1,11 +1,20 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 
 class CodeDemo extends Component {
-  render() {
-    var desc = this.props.description ? <p>{this.props.description}</p> : "";
+  static propTypes = {
+    children: PropTypes.any,
+    name: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
+    usage: PropTypes.string.isRequired,
+    description: PropTypes.string
+  };
 
-    return(
+  render() {
+    const desc = this.props.description ? <p>{this.props.description}</p> : '';
+
+    return (
       <div styles={{ marginTop: '80px' }}>
         <hr />
 
@@ -13,7 +22,7 @@ class CodeDemo extends Component {
           {this.props.children}
         </div>
 
-        <Highlight className='javascript'>
+        <Highlight className="javascript">
 {`import ${this.props.name} from '${this.props.path}';
 
 class MyClass extends React.Component {
@@ -28,12 +37,5 @@ class MyClass extends React.Component {
     );
   }
 }
-
-CodeDemo.propTypes = {
-  name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
-  usage: PropTypes.string.isRequired,
-  description: PropTypes.string
-};
 
 export default CodeDemo;

@@ -138,7 +138,7 @@ class Nav extends React.Component {
                   activeStyles={styles.aActive}
                   hoverStyles={styles.aHover}
                   styles={a}
-                  to="index">
+                  to="/">
                     About
                 </ALink>
               </li>
@@ -148,7 +148,7 @@ class Nav extends React.Component {
                   activeStyles={styles.aActive}
                   hoverStyles={styles.aHover}
                   styles={a}
-                  to="studies">
+                  to="/studies">
                     Studies
                 </ALink>
               </li>
@@ -158,7 +158,7 @@ class Nav extends React.Component {
                   activeStyles={styles.aActive}
                   hoverStyles={styles.aHover}
                   styles={a}
-                  to="thoughts">
+                  to="/thoughts">
                     Thoughts
                 </ALink>
               </li>

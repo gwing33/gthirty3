@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { State, Link } from 'react-router';
-import reactMixin from 'react-mixin';
+import { Link } from 'react-router';
+// import reactMixin from 'react-mixin';
 import onHover from './utils/onHover.js';
 import StyleSheet from 'react-style';
 import { colors } from 'styles/base.styles';
@@ -16,17 +16,22 @@ const styles = StyleSheet.create({
   }
 });
 
+// @reactMixin.decorate(State)
 @onHover
-@reactMixin.decorate(State)
 class ALink extends Component {
   static propTypes = {
     children: PropTypes.any,
+    styles: PropTypes.any,
     to: PropTypes.string.isRequired,
     params: PropTypes.object,
     query: PropTypes.object,
-    isActive: PropTypes.bool,
+    isHover: PropTypes.bool,
     activeStyles: PropTypes.object,
     hoverStyles: PropTypes.object
+  };
+
+  static contextTypes = {
+    router: PropTypes.any
   };
 
   static defaultProps = {
@@ -36,20 +41,27 @@ class ALink extends Component {
   };
 
   render() {
-    const props = this.props;
-    const isActive = this.isActive(props.to, props.params, props.query);
-
+    const {
+      children,
+      to,
+      params,
+      query,
+      isHover,
+      activeStyles,
+      hoverStyles
+    } = this.props;
+    const isActive = this.context.router.isActive(to, query, params);
     const styls = [
       styles.base,
-      props.styles,
-      isActive ? props.activeStyles : {},
-      props.isHover ? styles.hover : {},
-      props.isHover ? props.hoverStyles : {}
+      this.props.styles,
+      isActive ? activeStyles : {},
+      isHover ? styles.hover : {},
+      isHover ? hoverStyles : {}
     ];
 
     return (
-      <Link to={props.to} params={props.params} query={props.query} styles={styls}>
-        {this.props.children}
+      <Link to={to} params={params} query={query} styles={styls}>
+        {children}
       </Link>
     );
   }

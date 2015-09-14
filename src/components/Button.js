@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import StyleSheet from 'react-style';
-import onHover from 'utils/onHover.js';
+import onHover from './utils/onHover.js';
 import { colors } from 'styles/base.styles';
 
 const styles = StyleSheet.create({
@@ -41,17 +42,27 @@ const styles = StyleSheet.create({
 
 @onHover
 class Button extends Component {
+  static propTypes = {
+    children: PropTypes.any,
+    type: PropTypes.string,
+    isHover: PropTypes.bool
+  };
+
+  static defaultProps = {
+    type: 'tertiary'
+  };
+
   render() {
-    let { type, isHover } = this.props;
+    const { type, isHover } = this.props;
 
-    let btn = styles[type],
-        btn_hov = styles[type + 'Hov'];
+    const btn = styles[type];
+    const btnHov = styles[type + 'Hov'];
 
-    let styls = [
+    const styls = [
       styles.button,
       btn,
       isHover ? styles.buttonHov : {},
-      isHover ? btn_hov : {},
+      isHover ? btnHov : {},
     ];
 
     return (
@@ -61,9 +72,5 @@ class Button extends Component {
     );
   }
 }
-
-Button.defaultProps = {
-  type: 'tertiary'
-};
 
 export default Button;
