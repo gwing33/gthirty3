@@ -3,14 +3,18 @@
 My personal website.
 For when I want to write blog articles, test out code or designs.
 
-## Install
-Running on iojs 2.3.
+## Install / Running
+Running on Node v4.0
 
 ```bash
-npm Install
-gulp # Run for Development
-gulp webpack:prod # Build for production
-npm start # Run in Production mode
+npm install
+
+# Run in Development
+npm run dev
+
+# Run in Production...
+npm run build
+npm start
 ```
 
 ## Deploying
@@ -55,5 +59,6 @@ It's on Heroku, so just push to master and it'll auto deploy.
         - [x] ~~ALink~~
         - [x] ~~Logo~~
         - [x] ~~Backdrop~~
+    - [x] Upgrade to Redux Framework
     - [ ] Pull in instagram photos. (In Progress)
     - [ ] Navigation to place text equidistant from each other.
