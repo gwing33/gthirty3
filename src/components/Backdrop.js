@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import color from 'color';
 import StyleSheet from 'react-style';
-import { colors } from 'styles/base.styles';
+import { colors } from '../styles/base.styles';
 
 const styles = StyleSheet.create({
   backdrop: {

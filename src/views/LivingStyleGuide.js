@@ -1,11 +1,11 @@
 import React from 'react';
-import BaseStyles from 'styles/base.styles';
-import CodeDemo from 'components/CodeDemo';
-import Title from 'components/Title';
-import Button from 'components/Button';
-import ALink from 'components/ALink';
-import Logo from 'components/Logo';
-import Backdrop from 'components/Backdrop';
+import BaseStyles from '../styles/base.styles';
+import CodeDemo from '../components/CodeDemo';
+import Title from '../components/Title';
+import Button from '../components/Button';
+import ALink from '../components/ALink';
+import Logo from '../components/Logo';
+import Backdrop from '../components/Backdrop';
 
 class LivingStyleGuide extends React.Component {
   render() {

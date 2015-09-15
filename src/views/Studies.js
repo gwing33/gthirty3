@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseStyles from 'styles/base.styles';
-import Title from 'components/Title';
+import BaseStyles from '../styles/base.styles';
+import Title from '../components/Title';
 
 class CaseStudies extends React.Component {
   render() {

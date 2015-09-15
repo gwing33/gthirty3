@@ -1,9 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
-
 import StyleSheet from 'react-style';
 import BaseStyles from '../styles/base.styles.js';
-
 import SocialItem from './SocialItem.js';
 
 const styles = StyleSheet.create({

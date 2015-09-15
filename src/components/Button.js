@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import StyleSheet from 'react-style';
 import onHover from './utils/onHover.js';
-import { colors } from 'styles/base.styles';
+import { colors } from '../styles/base.styles';
 
 const styles = StyleSheet.create({
   button: {

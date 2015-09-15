@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { colors } from 'styles/base.styles';
+import { colors } from '../styles/base.styles';
 import StyleSheet from 'react-style';
-import ResponsiveUtil from 'utils/ResponsiveUtil';
+import ResponsiveUtil from '../utils/ResponsiveUtil';
 import windowDimensions from './utils/windowDimensions.js';
 import Icon from './Icon.js';
 

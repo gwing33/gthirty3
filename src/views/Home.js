@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import BaseStyles from 'styles/base.styles';
+import BaseStyles from '../styles/base.styles';
 import StyleSheet from 'react-style';
-import Title from 'components/Title';
+import Title from '../components/Title';
 
 const styles = StyleSheet.create({
   h2: {

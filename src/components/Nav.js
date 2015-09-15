@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import BaseStyles, { colors } from 'styles/base.styles';
+import BaseStyles, { colors } from '../styles/base.styles';
 import StyleSheet from 'react-style';
 import windowDimensions from './utils/windowDimensions.js';
-import ResponsiveUtil from 'utils/ResponsiveUtil';
+import ResponsiveUtil from '../utils/ResponsiveUtil';
 import Logo from './Logo.js';
 import ALink from './ALink.js';
 // import Sticky from 'react-sticky';

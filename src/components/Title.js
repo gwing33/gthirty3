@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { colors } from 'styles/base.styles';
+import { colors } from '../styles/base.styles';
 import StyleSheet from 'react-style';
 
 const styles = StyleSheet.create({

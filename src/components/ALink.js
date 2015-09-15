@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-// import reactMixin from 'react-mixin';
 import onHover from './utils/onHover.js';
 import StyleSheet from 'react-style';
-import { colors } from 'styles/base.styles';
+import { colors } from '../styles/base.styles';
 
 const styles = StyleSheet.create({
-//  active: { },
   hover: {
     color: colors.blue
   },
@@ -16,7 +14,6 @@ const styles = StyleSheet.create({
   }
 });
 
-// @reactMixin.decorate(State)
 @onHover
 class ALink extends Component {
   static propTypes = {

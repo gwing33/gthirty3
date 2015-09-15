@@ -1,7 +1,7 @@
 import React from 'react';
 import StyleSheet from 'react-style';
-import BaseStyles, { colors } from 'styles/base.styles.js';
-import ResponsiveUtil from 'utils/ResponsiveUtil';
+import BaseStyles, { colors } from '../styles/base.styles.js';
+import ResponsiveUtil from '../utils/ResponsiveUtil';
 
 import windowDimensions from './utils/windowDimensions.js';
 

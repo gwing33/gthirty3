@@ -1,7 +1,6 @@
 import React from 'react';
-import BaseStyles from 'styles/base.styles';
-// import StyleSheet from 'react-style';
-import Title from 'components/Title';
+import BaseStyles from '../../styles/base.styles';
+import Title from '../../components/Title';
 
 class UserFlows extends React.Component {
   render() {

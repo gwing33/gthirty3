@@ -1,10 +1,10 @@
 import React from 'react';
-import BaseStyles, { colors } from 'styles/base.styles.js';
+import BaseStyles, { colors } from '../styles/base.styles.js';
 import StyleSheet from 'react-style';
 import { Link } from 'react-router';
-import Title from 'components/Title';
-import Backdrop from 'components/Backdrop';
-import Button from 'components/Button';
+import Title from '../components/Title';
+import Backdrop from '../components/Backdrop';
+import Button from '../components/Button';
 
 const styles = StyleSheet.create({
   link: {
