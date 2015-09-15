@@ -1,8 +1,11 @@
 {
-  "name": "gthirty3-redux",
-  "version": "1.0.0",
+  "name": "gthirty3",
+  "version": "2.0.0",
   "description": "Personal Website with ReduxJS as the framework",
   "main": "bin/server.js",
+  "engines": {
+    "node": "4.0.x"
+  },
   "scripts": {
     "start": "node ./node_modules/better-npm-run start",
     "build": "webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
