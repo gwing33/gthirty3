@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import BaseStyles from '../styles/base.styles.js';
 import SocialItem from './SocialItem.js';
 
-const styles = StyleSheet.create({
+const styles = {
   social: {
     position: 'absolute',
     zIndex: '100',
@@ -12,8 +12,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     marginBottom: '-5px'
   }
-});
+};
 
+@Radium
 class Social extends React.Component {
   render() {
     const socialIcons = [{
@@ -28,7 +29,7 @@ class Social extends React.Component {
     }];
 
     return (
-      <ul styles={[BaseStyles.resetList, styles.social]}>
+      <ul style={[BaseStyles.resetList, styles.social]}>
         {_.map(socialIcons, (social, i) => {
           return <SocialItem key={`social-${i}`} type={social.type} href={social.href} />;
         })}

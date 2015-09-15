@@ -1,12 +1,19 @@
 import React from 'react';
 import BaseStyles, { colors } from '../styles/base.styles.js';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import { Link } from 'react-router';
 import Title from '../components/Title';
 import Backdrop from '../components/Backdrop';
 import Button from '../components/Button';
 
-const styles = StyleSheet.create({
+const styles = {
+  container: {
+    paddingTop: '60px',
+    paddingRight: '15px',
+    paddingBottom: '60px',
+    paddingLeft: '15px'
+  },
+
   link: {
     textAlign: 'center',
     padding: '40px',
@@ -17,24 +24,25 @@ const styles = StyleSheet.create({
     color: '#ffffff'
   }
 
-});
+};
 
+@Radium
 class Thoughts extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
+      <div style={[BaseStyles.container, styles.container]}>
 
-        <Title isThin={false} importance="2">THOUGHTS</Title>
+        <Title isThin={false} importance={2}>THOUGHTS</Title>
         <p>
           Various ideas on what I'm really passionate about.
         </p>
 
-        <Backdrop styles={{ backgroundColor: colors.green, marginBottom: '60px' }}>
-          <Link to="/thoughts/style-guide" styles={styles.link}>
-            <Title isThin={false} importance="3" styles={styles.white}>
+        <Backdrop style={{ backgroundColor: colors.green, marginBottom: '60px' }}>
+          <Link to="/thoughts/style-guide" style={styles.link}>
+            <Title isThin={false} importance={3} style={styles.white}>
               The Branding & Style Guidelines
             </Title>
-            <p styles={styles.white}>
+            <p style={styles.white}>
               Exploring the benefits of style guides.
             </p>
 
@@ -44,12 +52,12 @@ class Thoughts extends React.Component {
           </Link>
         </Backdrop>
 
-        <Backdrop styles={{ backgroundColor: colors.blue}}>
-          <Link to="/thoughts/user-flows" styles={styles.link}>
-            <Title isThin={false} importance="3" styles={styles.white}>
+        <Backdrop style={{ backgroundColor: colors.blue}}>
+          <Link to="/thoughts/user-flows" style={styles.link}>
+            <Title isThin={false} importance={3} style={styles.white}>
               User Flows and Stories
             </Title>
-            <p styles={styles.white}>
+            <p style={styles.white}>
               Starting a project and understanding your target.
             </p>
 

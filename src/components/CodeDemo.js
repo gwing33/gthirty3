@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium';
 import Highlight from 'react-highlight';
 
+@Radium
 class CodeDemo extends Component {
   static propTypes = {
     children: PropTypes.any,
@@ -15,10 +17,10 @@ class CodeDemo extends Component {
     const desc = this.props.description ? <p>{this.props.description}</p> : '';
 
     return (
-      <div styles={{ marginTop: '80px' }}>
+      <div style={{ marginTop: '80px' }}>
         <hr />
 
-        <div styles={{ padding: '40px 0' }}>
+        <div style={{ padding: '40px 0' }}>
           {this.props.children}
         </div>
 

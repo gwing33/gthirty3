@@ -1,5 +1,3 @@
-import StyleSheet from 'react-style';
-
 export const colors = {
   rgb: {
     blue: '41,121,188'
@@ -13,16 +11,28 @@ export const colors = {
   lightGray: '#D7DCE0'
 };
 
-export default StyleSheet.create({
+export default {
   container: {
     maxWidth: '600px',
-    margin: '0 auto',
-    padding: '0 15px'
+    marginTop: '0',
+    marginRight: 'auto',
+    marginBottom: '0',
+    marginLeft: 'auto',
+    paddingTop: '0',
+    paddingRight: '15px',
+    paddingBottom: '0',
+    paddingLeft: '15px'
   },
 
   resetList: {
-    margin: 0,
-    padding: 0,
+    marginTop: '0',
+    marginRight: '0',
+    marginBottom: '0',
+    marginLeft: '0',
+    paddingTop: '0',
+    paddingRight: '0',
+    paddingBottom: '0',
+    paddingLeft: '0',
     listStyle: 'none'
   }
-});
+};

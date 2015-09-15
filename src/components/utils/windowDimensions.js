@@ -1,6 +1,8 @@
 import React from 'react';
 import ResponsiveUtil from '../../utils/ResponsiveUtil';
+import Radium from 'radium';
 
+@Radium
 export default (Component) => {
 
   class Connect extends React.Component {
@@ -21,7 +23,8 @@ export default (Component) => {
     }
 
     _handleResize() {
-      this.setState( ResponsiveUtil.getSize() );
+      const size = ResponsiveUtil.getSize();
+      this.setState( size );
     }
 
     render() {

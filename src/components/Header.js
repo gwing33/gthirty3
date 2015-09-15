@@ -1,5 +1,5 @@
 import React from 'react';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import BaseStyles, { colors } from '../styles/base.styles.js';
 import ResponsiveUtil from '../utils/ResponsiveUtil';
 
@@ -10,7 +10,7 @@ import Logo from './Logo.js';
 import Backdrop from './Backdrop.js';
 import Title from './Title.js';
 
-const styles = StyleSheet.create({
+const styles = {
   backdrop: { backgroundColor: '#56595C' },
 
   content: {
@@ -18,25 +18,29 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     position: 'relative',
     zIndex: '100',
-    color: '#fff'
+    color: '#ffffff'
   },
 
   header: {
-    padding: '15px',
+    paddingTop: '15px',
+    paddingRight: '15px',
+    paddingBottom: '15px',
+    paddingLeft: '15px',
     borderBottom: `1px solid ${colors.darkestGray}`
   },
 
   h1: {
     margin: '57px 0 0 0',
-    color: '#fff'
+    color: '#ffffff'
   },
 
   subtitle: {
     display: 'block',
-    color: '#fff'
+    color: '#ffffff'
   }
-});
+};
 
+@Radium
 @windowDimensions
 class Header extends React.Component {
   render() {
@@ -54,15 +58,15 @@ class Header extends React.Component {
     };
 
     return (
-      <Backdrop styles={styles.backdrop}>
-        <header styles={[styles.header, padding]}>
-          <div styles={[BaseStyles.container, styles.content]}>
+      <Backdrop style={styles.backdrop}>
+        <header style={[styles.header, padding]}>
+          <div style={[BaseStyles.container, styles.content]}>
             <div>
               <Logo size={ResponsiveUtil.calcOffWidth(100, 150)} fill="#1D1E21" />
             </div>
-            <Title styles={[styles.h1, h1]}>
+            <Title style={[styles.h1, h1]}>
               Gerald Leenerts III
-              <span styles={[styles.subtitle, subtitle]}>UI/UX Designer + Engineer</span>
+              <span style={[styles.subtitle, subtitle]}>UI/UX Designer + Engineer</span>
             </Title>
           </div>
 

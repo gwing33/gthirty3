@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import BaseStyles from '../styles/base.styles';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import Title from '../components/Title';
 
-const styles = StyleSheet.create({
+const styles = {
+  container: {
+    paddingTop: '60px',
+    paddingRight: '15px',
+    paddingBottom: '60px',
+    paddingLeft: '15px'
+  },
   h2: {
     marginTop: '120px'
   },
@@ -11,12 +17,13 @@ const styles = StyleSheet.create({
   h5: {
     marginTop: '20px'
   }
-});
+};
 
+@Radium
 class Home extends Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
+      <div style={[BaseStyles.container, styles.container]}>
 
         <Title isThin={false} importance={2}>PASSION</Title>
         <hr />
@@ -24,20 +31,20 @@ class Home extends Component {
           I have a desire to create a great scalable branding experience for companies. Branding is not just about a great logo, it also entails consistent look throughout a website or suite of products. A great style/branding guide makes the UX better, because you change core concepts and not just the surface design.
         </p>
         <p>
-          Education, willingness to experiment and a desire towards craftsmanship makes up who I am. To be able to prove a thoery is more important than being able to win debates because of a silver-tongue.
+          Education, willingness to experiment and a desire towards craftsmanship makes up who I am. To be able to prove a theory is more important than being able to win debates because of a silver-tongue.
         </p>
 
 
-        <Title isThin={false} importance={2} styles={styles.h2}>EXPERIENCES</Title>
+        <Title isThin={false} importance={2} style={styles.h2}>EXPERIENCES</Title>
         <hr />
-        <Title isThin={false} importance={5} styles={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></Title>
         <ul className="list">
           <li>Co-Founder, Design and Branding Strategist</li>
           <li>Designed the full experience of the Pearl Coffee brand.</li>
-          <li>Focus on eductation as a large part of our marketing strategy.</li>
+          <li>Focus on education as a large part of our marketing strategy.</li>
         </ul>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></Title>
         <ul className="list">
           <li>Senior UX Developer / Senior Front-end Engineer / Senior Software Engineer</li>
           <li>React / Flux lead engineer.</li>
@@ -45,7 +52,7 @@ class Home extends Component {
           <li>Focused on creating a style guide that both Engineers and Designers can work on as a point of hand off and documentation for branding consistency.</li>
         </ul>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>SpyFu <em>(May 2011 - April 2014)</em></Title>
         <ul className="list">
           <li>UI/UX Designer</li>
           <li>Redesigned the entire front-end of SpyFu.com, had to work around the large data aspect.</li>
@@ -55,7 +62,7 @@ class Home extends Component {
         </ul>
 
 
-        <Title isThin={false} importance={5} styles={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Universal UClick <em>(July 2010 - May 2011)</em></Title>
         <ul className="list">
           <li>UI/UX Designer</li>
           <li>Worked with the auther of Doonsebury to create their website, helping them understand the difference between print and web design.</li>
@@ -64,16 +71,16 @@ class Home extends Component {
         </ul>
 
 
-        <Title isThin={false} importance={2} styles={styles.h2}>EDUCATION</Title>
-        <Title isThin={false} importance={5} styles={styles.h5}>Bachelors of Fine Arts with an emphasis in Computer Animation</Title>
+        <Title isThin={false} importance={2} style={styles.h2}>EDUCATION</Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Bachelors of Fine Arts with an emphasis in Computer Animation</Title>
         <ul className="list">
           <li>Missouri State University</li>
         </ul>
 
 
-        <Title isThin={false} importance={2} styles={styles.h2}>SKILLS & READS</Title>
+        <Title isThin={false} importance={2} style={styles.h2}>SKILLS & READS</Title>
         <hr />
-        <Title isThin={false} importance={2} styles={styles.h5}>Processes & Methodologies</Title>
+        <Title isThin={false} importance={2} style={styles.h5}>Processes & Methodologies</Title>
         <ul className="list">
           <li>Two-way Communication</li>
           <li>Ideation & Validation</li>
@@ -86,14 +93,14 @@ class Home extends Component {
           <li>Agile / Scrum</li>
         </ul>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>Design & Product</Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Design & Product</Title>
         <ul className="list">
           <li>UXPin and Wireframes</li>
           <li>Adobe Creative Suite: Photoshop, Illustrator, After Effects</li>
           <li>Sketch 3</li>
         </ul>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>Development & Engineering</Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Development & Engineering</Title>
         <ul className="list">
           <li>JavaScript{':'} React, Flux, BackboneJS, MV* Patterns</li>
           <li>LESS / SASS / CSS / HTML</li>
@@ -103,7 +110,7 @@ class Home extends Component {
           <li>Bash Scripting, Docker, TeamCity, Jenkins, Octopus Deploy, TravisCI</li>
         </ul>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>Favorite Books</Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Favorite Books</Title>
         <ul className="list">
           <li>Don't make me Think</li>
           <li>Design of Everyday Things</li>

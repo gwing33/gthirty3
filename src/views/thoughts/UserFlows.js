@@ -5,7 +5,7 @@ import Title from '../../components/Title';
 class UserFlows extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
+      <div style={[BaseStyles.container, { padding: '60px 15px' }]}>
         <Title isThin={false}>User Flows & Stories</Title>
         <p>
           Coming Soon!

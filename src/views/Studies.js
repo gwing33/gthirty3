@@ -1,15 +1,27 @@
 import React from 'react';
+import Radium from 'radium';
 import BaseStyles from '../styles/base.styles';
 import Title from '../components/Title';
 
-class CaseStudies extends React.Component {
+const styles = {
+  container: {
+    paddingTop: '60px',
+    paddingRight: '15px',
+    paddingBottom: '60px',
+    paddingLeft: '15px',
+    textAlign: 'center'
+  }
+};
+
+@Radium
+class Studies extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px', textAlign: 'center' }]}>
+      <div style={[BaseStyles.container, styles.container]}>
         <Title isThin={false}>Studies - Coming Soon!</Title>
       </div>
     );
   }
 }
 
-export default CaseStudies;
+export default Studies;

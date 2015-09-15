@@ -1,14 +1,19 @@
+import _ from 'lodash';
 import React from 'react';
 import { Link } from 'react-router';
 import BaseStyles, { colors } from '../styles/base.styles';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import windowDimensions from './utils/windowDimensions.js';
 import ResponsiveUtil from '../utils/ResponsiveUtil';
 import Logo from './Logo.js';
 import ALink from './ALink.js';
 // import Sticky from 'react-sticky';
 
-const styles = StyleSheet.create({
+// Shit hack.
+const newRadium = Radium;
+const NewLink = newRadium(Link);
+
+const styles = {
   sticky: {
     position: 'relative',
     width: '100%',
@@ -19,7 +24,10 @@ const styles = StyleSheet.create({
     width: '100%',
     borderBottom: `1px solid ${colors.lightGray}`,
     position: 'absolute',
-    padding: '0',
+    paddingTop: '0',
+    paddingRight: '0',
+    paddingBottom: '0',
+    paddingLeft: '0',
     top: '0',
     left: '0',
     backgroundColor: '#ffffff'
@@ -36,7 +44,6 @@ const styles = StyleSheet.create({
     display: 'inline-block',
     transform: 'rotate(270deg)',
     WebkitTransform: 'rotate(270deg)',
-    msTransform: 'rotate(270deg)',
     fontSize: '40px',
     textAlign: 'center',
     width: '138px',
@@ -63,7 +70,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    padding: '0 15px'
+    paddingRight: '15px',
+    paddingLeft: '15px',
+    width: '100%'
   },
 
   li: {
@@ -83,9 +92,10 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.blue,
     borderBottomStyle: 'solid'
   }
-});
+};
 
 @windowDimensions
+@Radium
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -122,42 +132,39 @@ class Nav extends React.Component {
     const left = ResponsiveUtil.calcOffWidth(-50, 20);
 
     return (
-      <div styles={sticky}>
-        <nav styles={nav}>
-          <div styles={[styles.brand, { left: left }]}>
-            <div styles={brandTitle}>gThirty</div>
-            <Link to="index" styles={logo}>
+      <div style={sticky}>
+        <nav style={nav}>
+          <div style={[styles.brand, { left: left }]}>
+            <div style={brandTitle}>gThirty</div>
+            <NewLink to="index" style={logo}>
               <Logo size={ResponsiveUtil.calcOffWidth(50, 100)} />
-            </Link>
+            </NewLink>
           </div>
 
-          <div styles={[BaseStyles.container, styles.container]}>
-            <ol styles={[BaseStyles.resetList, styles.ol]}>
-              <li styles={li}>
+          <div style={[BaseStyles.container, styles.container]}>
+            <ol style={[BaseStyles.resetList, styles.ol]}>
+              <li style={li}>
                 <ALink
-                  activeStyles={styles.aActive}
-                  hoverStyles={styles.aHover}
-                  styles={a}
+                  activeStyle={styles.aActive}
+                  style={a}
                   to="/">
                     About
                 </ALink>
               </li>
 
-              <li styles={li}>
+              <li style={li}>
                 <ALink
-                  activeStyles={styles.aActive}
-                  hoverStyles={styles.aHover}
-                  styles={a}
+                  activeStyle={styles.aActive}
+                  style={a}
                   to="/studies">
                     Studies
                 </ALink>
               </li>
 
-              <li styles={[li, { marginRight: 0 }]}>
+              <li style={_.flatten([li, { marginRight: '0px' }])}>
                 <ALink
-                  activeStyles={styles.aActive}
-                  hoverStyles={styles.aHover}
-                  styles={a}
+                  activeStyle={styles.aActive}
+                  style={a}
                   to="/thoughts">
                     Thoughts
                 </ALink>

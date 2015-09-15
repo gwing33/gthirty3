@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import onHover from './utils/onHover.js';
 import { colors } from '../styles/base.styles';
 
-const styles = StyleSheet.create({
+const styles = {
   button: {
     borderWidth: '1px',
     borderStyle: 'solid',
@@ -38,9 +38,10 @@ const styles = StyleSheet.create({
   tertiaryHov: {
     backgroundColor: colors.darkGray
   }
-});
+};
 
 @onHover
+@Radium
 class Button extends Component {
   static propTypes = {
     children: PropTypes.any,
@@ -66,7 +67,7 @@ class Button extends Component {
     ];
 
     return (
-      <button styles={styls}>
+      <button style={styls}>
         {this.props.children}
       </button>
     );

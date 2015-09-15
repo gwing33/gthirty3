@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React, { PropTypes } from 'react';
 import color from 'color';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import { colors } from '../styles/base.styles';
 
-const styles = StyleSheet.create({
+const styles = {
   backdrop: {
     overflow: 'hidden',
     position: 'relative'
@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     width: '200%',
     transform: 'rotate(-10deg)',
     WebkitTransform: 'rotate(-10deg)',
-    msTransform: 'rotate(-10deg)',
     height: '100%',
     left: '-50%'
   },
@@ -29,23 +28,24 @@ const styles = StyleSheet.create({
     top: '-33%',
     zIndex: '5',
   }
-});
+};
 
+@Radium
 class Backdrop extends React.Component {
   static propTypes = {
     children: PropTypes.any,
     isDark: PropTypes.bool,
-    styles: PropTypes.object
+    style: PropTypes.object
   };
 
   static defaultProps = {
     isDark: true,
-    styles: {}
+    style: {}
   };
 
   render() {
     const { children, isDark } = this.props;
-    const styl = _.merge({ backgroundColor: colors.darkGray }, this.props.styles);
+    const styl = _.merge({ backgroundColor: colors.darkGray }, this.props.style);
     const bgc = styl.backgroundColor;
     const c1 = color(bgc);
     const c2 = color(bgc);
@@ -54,10 +54,10 @@ class Backdrop extends React.Component {
     styles.backdrop2.backgroundColor = (isDark ? c2.darken(0.075) : c2.lighten(0.075)).rgbString();
 
     return (
-      <div styles={[styles.backdrop, styl]}>
-        <div styles={[styles.backdropBg, styles.backdrop1]}/>
-        <div styles={[styles.backdropBg, styles.backdrop2]}/>
-        <div styles={{ position: 'relative', zIndex: '15' }}>
+      <div style={[styles.backdrop, styl]}>
+        <div style={[styles.backdropBg, styles.backdrop1]}/>
+        <div style={[styles.backdropBg, styles.backdrop2]}/>
+        <div style={{ position: 'relative', zIndex: '15' }}>
           {children}
         </div>
       </div>

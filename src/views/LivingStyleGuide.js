@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import BaseStyles from '../styles/base.styles';
 import CodeDemo from '../components/CodeDemo';
 import Title from '../components/Title';
@@ -7,6 +8,16 @@ import ALink from '../components/ALink';
 import Logo from '../components/Logo';
 import Backdrop from '../components/Backdrop';
 
+const styles = {
+  container: {
+    paddingTop: '60px',
+    paddingRight: '15px',
+    paddingBottom: '60px',
+    paddingLeft: '15px'
+  }
+};
+
+@Radium
 class LivingStyleGuide extends React.Component {
   render() {
     const hr1 = {
@@ -30,13 +41,13 @@ class LivingStyleGuide extends React.Component {
     };
 
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
+      <div style={[BaseStyles.container, styles.container]}>
 
-        <div styles={{ position: 'relative' }}>
-          <hr styles={hr1} />
-          <Title styles={{ textAlign: 'center', margin: 0, position: 'relative', zIndex: 2 }}>Living Style Guide</Title>
-          <hr styles={hr2} />
-          <hr styles={hr3} />
+        <div style={{ position: 'relative' }}>
+          <hr style={hr1} />
+          <Title style={{ textAlign: 'center', margin: 0, position: 'relative', zIndex: 2 }}>Living Style Guide</Title>
+          <hr style={hr2} />
+          <hr style={hr3} />
           <p>
             This guide will continue to evolve, but this will allow a consistent branding evolution.
             The User Stories & Flows is to give an overview of what I'm looking to achieve from the site.
@@ -44,8 +55,8 @@ class LivingStyleGuide extends React.Component {
           </p>
         </div>
 
-        <div styles={{ marginTop: '80px' }}>
-          <Title isThin={false} importance="3">User Stories & Flows</Title>
+        <div style={{ marginTop: '80px' }}>
+          <Title isThin={false} importance={3}>User Stories & Flows</Title>
           <hr />
           <p>
             The goals of this website is to let people know who I am and also show them I am passionate about what I do and have a high standard of success.
@@ -80,29 +91,29 @@ class LivingStyleGuide extends React.Component {
           usage={`
      <Title>H1 Title Tag Thin</Title>
      <Title isThin={false}>H1 Title Tag Thin</Title>
-     <Title importance="2">H2 Title Tag Thin</Title>
-     <Title isThin={false} importance="2" >H2 Title Tag</Title>
-     <Title importance="3">H3 Title Tag Thin</Title>
-     <Title isThin={false} importance="3" >H3 Title Tag</Title>
-     <Title importance="4">H4 Title Tag Thin</Title>
-     <Title isThin={false} importance="4" >H4 Title Tag</Title>
-     <Title importance="5">H5 Title Tag Thin</Title>
-     <Title isThin={false} importance="5" >H5 Title Tag</Title>
-     <Title importance="6">H6 Title Tag Thin</Title>
-     <Title isThin={false} importance="6" >H6 Title Tag</Title>
+     <Title importance={2}>H2 Title Tag Thin</Title>
+     <Title isThin={false} importance={2} >H2 Title Tag</Title>
+     <Title importance={3}>H3 Title Tag Thin</Title>
+     <Title isThin={false} importance={3} >H3 Title Tag</Title>
+     <Title importance={4}>H4 Title Tag Thin</Title>
+     <Title isThin={false} importance={4} >H4 Title Tag</Title>
+     <Title importance={5}>H5 Title Tag Thin</Title>
+     <Title isThin={false} importance={5} >H5 Title Tag</Title>
+     <Title importance={6}>H6 Title Tag Thin</Title>
+     <Title isThin={false} importance={6} >H6 Title Tag</Title>
     `}>
           <Title>H1 Title Tag Thin</Title>
           <Title isThin={false}>H1 Title Tag</Title>
-          <Title importance="2">H2 Title Tag Thin</Title>
-          <Title isThin={false} importance="2" >H2 Title Tag</Title>
-          <Title importance="3">H3 Title Tag Thin</Title>
-          <Title isThin={false} importance="3" >H3 Title Tag</Title>
-          <Title importance="4">H4 Title Tag Thin</Title>
-          <Title isThin={false} importance="4" >H4 Title Tag</Title>
-          <Title importance="5">H5 Title Tag Thin</Title>
-          <Title isThin={false} importance="5" >H5 Title Tag</Title>
-          <Title importance="6">H6 Title Tag Thin</Title>
-          <Title isThin={false} importance="6" >H6 Title Tag</Title>
+          <Title importance={2}>H2 Title Tag Thin</Title>
+          <Title isThin={false} importance={2} >H2 Title Tag</Title>
+          <Title importance={3}>H3 Title Tag Thin</Title>
+          <Title isThin={false} importance={3} >H3 Title Tag</Title>
+          <Title importance={4}>H4 Title Tag Thin</Title>
+          <Title isThin={false} importance={4} >H4 Title Tag</Title>
+          <Title importance={5}>H5 Title Tag Thin</Title>
+          <Title isThin={false} importance={5} >H5 Title Tag</Title>
+          <Title importance={6}>H6 Title Tag Thin</Title>
+          <Title isThin={false} importance={6} >H6 Title Tag</Title>
         </CodeDemo>
 
         <CodeDemo
@@ -146,12 +157,12 @@ class LivingStyleGuide extends React.Component {
           path="~/components/Backdrop"
           description="Consistent design element throught the entire site."
           usage={`
-      <Backdrop styles={{ padding: '20px' }}>
-        <Title styles={{ color: '#ffffff' }} importance="3">Sweet Backdrop!</Title>
+      <Backdrop style={{ padding: '20px' }}>
+        <Title style={{ color: '#ffffff' }} importance={3}>Sweet Backdrop!</Title>
       </Backdrop>
     `}>
-          <Backdrop styles={{ padding: '20px' }}>
-            <Title styles={{ color: '#ffffff' }} importance="3">Sweet Backdrop!</Title>
+          <Backdrop style={{ padding: '20px' }}>
+            <Title style={{ color: '#ffffff' }} importance={3}>Sweet Backdrop!</Title>
           </Backdrop>
         </CodeDemo>
       </div>

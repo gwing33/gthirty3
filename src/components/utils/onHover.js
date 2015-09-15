@@ -1,5 +1,7 @@
 import React from 'react';
+import Radium from 'radium';
 
+@Radium
 export default (Component) => {
 
   class WrapperComponent extends React.Component {
@@ -22,7 +24,7 @@ export default (Component) => {
     render() {
       return (
         <div
-          styles={{ display: 'inline-block' }}
+          style={{ display: 'inline-block' }}
           onMouseEnter={this._onMouseEnter.bind(this)}
           onMouseLeave={this._onMouseLeave.bind(this)}>
             <Component {...this.props} {...this.state} />

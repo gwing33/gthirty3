@@ -1,8 +1,9 @@
+import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { colors } from '../styles/base.styles';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 
-const styles = StyleSheet.create({
+const styles = {
   base: {
     color: colors.darkGray
   },
@@ -22,14 +23,15 @@ const styles = StyleSheet.create({
   h4Light: { fontSize: '40px' },
   h5Light: { fontSize: '30px' },
   h6Light: { fontSize: '20px' }
-});
+};
 
+@Radium
 class Title extends Component {
   static propTypes = {
     importance: PropTypes.number,
     isThin: PropTypes.bool,
     children: PropTypes.any,
-    styles: PropTypes.any
+    style: PropTypes.any
   };
 
   static defaultProps = {
@@ -38,16 +40,19 @@ class Title extends Component {
   };
 
   render() {
-    const { isThin, importance } = this.props;
+    const { children, isThin, importance, style } = this.props;
     const title = `h${importance}`;
 
     const styl = [
       styles[isThin ? 'baseLight' : 'base'],
-      styles[isThin ? title + 'Light' : title],
-      this.props.styles ? this.props.styles : {}
+      styles[isThin ? `${title}Light` : title]
     ];
 
-    return React.createElement(title, {styles: styl}, this.props.children);
+    if (style !== void 0) {
+      styl.push(style);
+    }
+
+    return React.createElement(title, {style: _.flatten(styl)}, children);
   }
 }
 

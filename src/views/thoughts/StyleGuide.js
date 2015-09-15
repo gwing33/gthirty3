@@ -1,26 +1,38 @@
 import React from 'react';
 import BaseStyles from '../../styles/base.styles.js';
-import StyleSheet from 'react-style';
+import Radium from 'radium';
 import Title from '../../components/Title';
 
-const styles = StyleSheet.create({
+const styles = {
+  container: {
+    paddingTop: '60px',
+    paddingRight: '15px',
+    paddingBottom: '60px',
+    paddingLeft: '15px'
+  },
+
   h2: {
     marginTop: '60px'
+  },
+
+  h3: {
+    marginTop: '20px'
   },
 
   h5: {
     marginTop: '20px'
   }
-});
+};
 
+@Radium
 class StyleGuide extends React.Component {
   render() {
     return (
-      <div styles={[BaseStyles.container, { padding: '60px 15px' }]}>
+      <div style={[BaseStyles.container, styles.container]}>
         <Title isThin={false}>The Branding & Style Guidelines</Title>
         <hr />
 
-        <Title isThin={false} importance={2} styles={styles.h2}>Visualizing and Documenting</Title>
+        <Title isThin={false} importance={2} style={styles.h2}>Visualizing and Documenting</Title>
         <p>
           Branding does not mean just a logo.
           It goes beyond that into the realm of consistency across an entire site which is why branding is a big indicator of user experience (UX).
@@ -31,16 +43,16 @@ class StyleGuide extends React.Component {
           That foundation is made up of 3 things, rules, goals and process.
         </p>
 
-        <Title isThin={false} importance={3}>THE RULES</Title>
+        <Title style={styles.h3} isThin={false} importance={3}>THE RULES</Title>
         <hr />
-        <h5 styles={styles.h5}>From the Designer's Perspective</h5>
+        <Title importance={5} isThin={false} style={styles.h5}>From the Designer's Perspective</Title>
         <p>
           Rules help creative people be...more creative.
           As obtuse as that sounds, when you have a rule to follow, you force yourself to think outside the box.
           That's where creativity thrives.
         </p>
 
-        <h5 styles={styles.h5}>From the Engineer's Perspective</h5>
+        <Title importance={5} isThin={false} style={styles.h5}>From the Engineer's Perspective</Title>
         <p>
           Engineers don't want to think too long about visual design.
           For some reason it hurts their head.
@@ -49,7 +61,7 @@ class StyleGuide extends React.Component {
           they code so they don't have to do manual labor, changing rules are manual labor.
         </p>
 
-        <h5 styles={styles.h5}>Rules Are and Are Not</h5>
+        <Title importance={5} isThin={false} style={styles.h5}>Rules Are and Are Not</Title>
         <p>
           What is a rule?
           To me, a rule is something I must abide by.
@@ -98,7 +110,7 @@ class StyleGuide extends React.Component {
           There are a lot of people doing exactly this, tweet me your favorite Branding or Style Guide! @GThirty3
         </p>
 
-        <Title isThin={false} importance={5} styles={styles.h5}>FOOTNOES</Title>
+        <Title isThin={false} importance={5} style={styles.h5}>FOOTNOES</Title>
         <ol>
           <li id="note_1">
             I believe changes should be made for the customers benefit, not the businesses.
