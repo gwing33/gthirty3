@@ -9,7 +9,7 @@ import {
     StyleGuide,
     UserFlows,
     NotFound
-  } from 'views/index';
+  } from './views';
 
 export default function(/* store */) {
   return (
