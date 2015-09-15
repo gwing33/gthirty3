@@ -50,7 +50,7 @@ class ALink extends Component {
       activeStyles,
       hoverStyles
     } = this.props;
-    const isActive = this.context.router.isActive(to, query, params);
+    const isActive = this.context.router.state.location.pathname === to;
     const styls = [
       styles.base,
       this.props.styles,

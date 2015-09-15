@@ -30,7 +30,7 @@ class Thoughts extends React.Component {
         </p>
 
         <Backdrop styles={{ backgroundColor: colors.green, marginBottom: '60px' }}>
-          <Link to="style-guide" styles={styles.link}>
+          <Link to="/thoughts/style-guide" styles={styles.link}>
             <Title isThin={false} importance="3" styles={styles.white}>
               The Branding & Style Guidelines
             </Title>
@@ -45,7 +45,7 @@ class Thoughts extends React.Component {
         </Backdrop>
 
         <Backdrop styles={{ backgroundColor: colors.blue}}>
-          <Link to="user-flows" styles={styles.link}>
+          <Link to="/thoughts/user-flows" styles={styles.link}>
             <Title isThin={false} importance="3" styles={styles.white}>
               User Flows and Stories
             </Title>
