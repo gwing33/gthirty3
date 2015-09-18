@@ -5,6 +5,5 @@ export default {
   Thoughts: require('./Thoughts'),
   LivingStyleGuide: require('./LivingStyleGuide'),
   StyleGuide: require('./thoughts/StyleGuide'),
-  UserFlows: require('./thoughts/UserFlows'),
   NotFound: require('./NotFound')
 };

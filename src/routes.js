@@ -7,7 +7,6 @@ import {
     Thoughts,
     LivingStyleGuide,
     StyleGuide,
-    UserFlows,
     NotFound
   } from './views';
 
@@ -18,7 +17,6 @@ export default function(/* store */) {
 
       <Route path="/thoughts" component={Thoughts}/>
       <Route path="/thoughts/style-guide" component={StyleGuide} />
-      <Route path="/thoughts/user-flows" component={UserFlows} />
 
       <Route path="/studies" component={Studies}/>
 

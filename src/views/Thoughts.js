@@ -52,20 +52,6 @@ class Thoughts extends React.Component {
           </Link>
         </Backdrop>
 
-        <Backdrop style={{ backgroundColor: colors.blue}}>
-          <Link to="/thoughts/user-flows" style={styles.link}>
-            <Title isThin={false} importance={3} style={styles.white}>
-              User Flows and Stories
-            </Title>
-            <p style={styles.white}>
-              Starting a project and understanding your target.
-            </p>
-
-            <Button>
-              Explore the Thought
-            </Button>
-          </Link>
-        </Backdrop>
       </div>
     );
   }

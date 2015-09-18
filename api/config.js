@@ -1,18 +1,12 @@
 module.exports = {
   development: {
     isProduction: false,
-    port: process.env.PORT,
     apiPort: process.env.APIPORT,
-    app: {
-      name: 'React Redux Example Development'
-    }
+    instagramToken: '365168422.09ca6d7.fe98781ffc4a442ba6d8e7b702aa14dd'
   },
   production: {
     isProduction: true,
-    port: process.env.PORT,
     apiPort: process.env.APIPORT,
-    app: {
-      name: 'React Redux Example Production'
-    }
+    instagramToken: '365168422.2ac9a7e.f8dc4e6bc4f14bea9e07d55de91b6ae8'
   }
 }[process.env.NODE_ENV || 'development'];
