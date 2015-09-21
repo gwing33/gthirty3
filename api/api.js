@@ -56,7 +56,7 @@ app.use((req, res) => {
   }
 });
 
-
+console.log(config);
 if (config.apiPort) {
   app.listen(config.apiPort, (err) => {
     if (err) {
@@ -66,5 +66,5 @@ if (config.apiPort) {
     console.info('==> 💻  Send requests to http://localhost:%s', config.apiPort);
   });
 } else {
-  console.error('==>     ERROR: No PORT environment variable has been specified');
+  console.error('==>     ERROR: No APIPORT environment variable has been specified');
 }

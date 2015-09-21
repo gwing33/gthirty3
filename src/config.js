@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     isProduction: false,
-    port: process.env.PORT,
+    port: process.env.PORT || 3000,
     apiPort: process.env.APIPORT,
     app: {
       name: 'React Redux Example Development'
@@ -9,7 +9,7 @@ module.exports = {
   },
   production: {
     isProduction: true,
-    port: process.env.PORT,
+    port: process.env.PORT || 3000,
     apiPort: process.env.APIPORT,
     app: {
       name: 'React Redux Example Production'
