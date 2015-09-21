@@ -136,7 +136,7 @@ class Nav extends React.Component {
         <nav style={nav}>
           <div style={[styles.brand, { left: left }]}>
             <div style={brandTitle}>gThirty</div>
-            <NewLink to="index" style={logo}>
+            <NewLink to="/" style={logo}>
               <Logo size={ResponsiveUtil.calcOffWidth(50, 100)} />
             </NewLink>
           </div>
