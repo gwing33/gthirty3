@@ -31,8 +31,6 @@ export default class Html extends Component {
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <link href='//fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css' />
           <link href='/css/base.css' rel='stylesheet' type='text/css' />
-          <link href='/css/highlight/default.css' rel='stylesheet' type='text/css' />
-          <link href='/css/highlight/github.css' rel='stylesheet' type='text/css' />
 
           <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png"/>
