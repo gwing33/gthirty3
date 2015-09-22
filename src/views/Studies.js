@@ -18,7 +18,6 @@ class Studies extends React.Component {
   render() {
     return (
       <div style={[BaseStyles.container, styles.container]}>
-        <Title isThin={false}>Studies - Coming Soon!</Title>
       </div>
     );
   }

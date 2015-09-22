@@ -131,6 +131,15 @@ class Nav extends React.Component {
 
     const left = ResponsiveUtil.calcOffWidth(-50, 20);
 
+    // <li style={li}>
+    //   <ALink
+    //     activeStyle={styles.aActive}
+    //     style={a}
+    //     to="/studies">
+    //       Studies
+    //   </ALink>
+    // </li>
+
     return (
       <div style={sticky}>
         <nav style={nav}>
@@ -149,15 +158,6 @@ class Nav extends React.Component {
                   style={a}
                   to="/">
                     About
-                </ALink>
-              </li>
-
-              <li style={li}>
-                <ALink
-                  activeStyle={styles.aActive}
-                  style={a}
-                  to="/studies">
-                    Studies
                 </ALink>
               </li>
 
