@@ -37,6 +37,13 @@ class Home extends Component {
 
         <Title isThin={false} importance={2} style={styles.h2}>EXPERIENCES</Title>
         <hr />
+        <Title isThin={false} importance={5} style={styles.h5}>Follow Up Boss<em>(February 2016 - Present)</em></Title>
+        <ul className="list">
+          <li>Senior Front-end Engineer</li>
+          <li>Primary focus is to build product for customers.</li>
+          <li>Adocate to maintain a style guide as we build.</li>
+        </ul>
+
         <Title isThin={false} importance={5} style={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></Title>
         <ul className="list">
           <li>Co-Founder, Design and Branding Strategist</li>
@@ -44,7 +51,7 @@ class Home extends Component {
           <li>Focus on education as a large part of our marketing strategy.</li>
         </ul>
 
-        <Title isThin={false} importance={5} style={styles.h5}>Life Time Fitness <em>(April 2014 - Present)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Life Time Fitness <em>(April 2014 - February 2016)</em></Title>
         <ul className="list">
           <li>Senior UX Developer / Senior Front-end Engineer / Senior Software Engineer</li>
           <li>React / Flux lead engineer.</li>
