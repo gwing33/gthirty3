@@ -37,11 +37,12 @@ class Home extends Component {
 
         <Title isThin={false} importance={2} style={styles.h2}>EXPERIENCES</Title>
         <hr />
-        <Title isThin={false} importance={5} style={styles.h5}>Follow Up Boss<em>(February 2016 - Present)</em></Title>
+        <Title isThin={false} importance={5} style={styles.h5}>Follow Up Boss <em>(February 2016 - Present)</em></Title>
         <ul className="list">
           <li>Senior Front-end Engineer</li>
-          <li>Primary focus is to build product for customers.</li>
-          <li>Adocate to maintain a style guide as we build.</li>
+          <li>Primary focus is to build product for our customers.</li>
+          <li>Adocate to maintain a style guide as we build out the product.</li>
+          <li>Maintain and advance our architecture and front-end technology.</li>
         </ul>
 
         <Title isThin={false} importance={5} style={styles.h5}>Pearl Coffee <em>(June 2013 - Present)</em></Title>
