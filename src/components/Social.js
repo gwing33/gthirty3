@@ -21,8 +21,8 @@ class Social extends React.Component {
       href: 'https://www.linkedin.com/pub/gerald-leenerts/10/a23/2a6',
       type: 'linkedin'
     }, {
-      href: 'https://plus.google.com/+GeraldLeenerts/posts',
-      type: 'google'
+      href: 'https://www.instagram.com/gthirty3/',
+      type: 'instagram'
     }, {
       href: 'https://github.com/gwing33',
       type: 'github'

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 // For now, highlight is causing issues. Going to comment out for now.
-//import Highlight from 'react-highlight';
+// import Highlight from 'react-highlight';
 
 @Radium
 class CodeDemo extends Component {

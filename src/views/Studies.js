@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import BaseStyles from '../styles/base.styles';
-import Title from '../components/Title';
+// import Title from '../components/Title';
 
 const styles = {
   container: {

@@ -15,15 +15,9 @@ export default function createApiClientStore(client, data) {
     finalCreateStore = applyMiddleware(middleware)(createStore);
   }
 
-  const reducer = require('./modules/reducer');
+  const reducer = s => s;
   const store = finalCreateStore(reducer, data);
   store.client = client;
-
-  if (__DEVELOPMENT__ && module.hot) {
-    module.hot.accept('./modules/reducer', () => {
-      store.replaceReducer(require('./modules/reducer'));
-    });
-  }
 
   return store;
 }
